@@ -1,0 +1,26 @@
+.scrollTop{
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 10px;
+    background-color: rgba(240, 248, 255, 0.662);
+
+    transition: 300ms;
+
+}
+
+.scrollTop i{
+    position: relative;
+    top: 5px;
+    color: rgb(218, 50, 50);
+    font-size: 22px;
+}
+
+.scrollTop:hover{
+    scale: 1.1;
+}
