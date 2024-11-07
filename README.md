@@ -6,7 +6,7 @@ Welcome to my personal portfolio website! This project showcases my journey, ski
 
 ## 🌐 Live Demo
 
-Check out my portfolio live [here](https://your-portfolio-link.com) and see my work in action!
+Check out my portfolio live [here](https://jagansportfolio.netlify.app/) and see my work in action!
 
 ---
 
@@ -45,5 +45,7 @@ This portfolio was built using the following technologies:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/portfolio.git
+   git clone https://github.com/SriHariJagan/myPortfolio.git
+   ```
+   
 
