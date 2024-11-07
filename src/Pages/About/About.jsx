@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./About.module.css";
+import { Fade } from "react-awesome-reveal";
 
 const About = ({ scrollToSection, contactRef }) => {
   const developerImg =
@@ -51,6 +52,7 @@ const About = ({ scrollToSection, contactRef }) => {
       </div>
 
       <div className={styles.intrests}>
+      <Fade direction="up">
         <div className={styles.card}>
           <div className={styles.cardImage}>
             <img src={developerImg} alt="developer" />
@@ -63,7 +65,9 @@ const About = ({ scrollToSection, contactRef }) => {
             </p>
           </div>
         </div>
+        </Fade>
 
+        <Fade direction="up">
         <div className={styles.card}>
           <div className={styles.cardImage}>
             <img src={problemsolverImg} alt="developer" />
@@ -76,7 +80,8 @@ const About = ({ scrollToSection, contactRef }) => {
             </p>
           </div>
         </div>
-
+        </Fade>
+        <Fade direction="up">
         <div className={styles.card}>
           <div className={styles.cardImage}>
             <img src={visionaryImage} alt="developer" />
@@ -90,6 +95,8 @@ const About = ({ scrollToSection, contactRef }) => {
             </p>
           </div>
         </div>
+        </Fade>
+
       </div>
     </div>
   );

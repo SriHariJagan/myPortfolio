@@ -1,14 +1,3 @@
-@keyframes appear{
-    from{
-        opacity: 0;
-        transform: translateY(150px);
-    }
-    to{
-        opacity: 1;
-        transform: translateY(0);
-        
-    }
-}
 
 
 .projectContainer{
@@ -65,36 +54,41 @@
 }
 
 .projectCard{
-    width: 300px;
-    max-height: 420px;
+    width: 320px;
+    max-height: 410px;
     border-radius: 8px;
 
-    background-color: rgba(255, 255, 255, 0.923);
+    background-color: rgba(213, 213, 213, 0.923);
     margin: 20px;
-    padding: 20px 0;
+    padding: 10px 0;
 
     transition: 500ms;
-
-    animation: appear linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 40%;
 }
 
 .projectCard:hover{
     scale: 1.05;
-    box-shadow: 0 0 10px 4px rgba(255, 217, 0, 0.473);
+    box-shadow: 0 0 10px 4px rgba(226, 224, 214, 0.473);
 }
 
 .cardImage{
     margin: auto;
-    width: 260px;
-    height: 210px;
+    width: 300px;
+    height: 200px;
 
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
 
     position: relative;
     overflow: hidden;
+}
+
+.cardImagePrev{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    opacity: .9;
+
+ 
 }
 
 .cardImageLinks{
@@ -170,15 +164,18 @@
     font-family: math;
     font-weight: 600;
     color: #6271E9;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 234, 234, 0.895);
     border-radius: 5px;
     position: relative;
     top: -22px;
 }
 
-.cardTitle{
+.projectDetails{
     position: relative;
-    top: -16px;
+    top: -18px;
+}
+
+.cardTitle{
     width: max-content;
     margin: 5px auto;
     font-size: 16px;
@@ -191,9 +188,6 @@
     max-height: 55px;
     text-align: center;
 
-    position: relative;
-    top: -15px;
-
     font-family: serif;
     color: rgb(60, 60, 60);
 }
@@ -201,30 +195,27 @@
 .cardSkills{
     width: 98%;
     max-height: 60px;
-    margin: auto;
+    margin: 10px auto;
     padding: 6px 10px;
 
     position: relative;
-    top: 12px;
+    top: 5px;
 
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
 
-    /* background-color: violet; */
-
 }
 
 .cardSkills h3{
+    position: absolute;
+    top: -14px;
     width: max-content;
     margin: auto;
     font-size: 13.5px;
     font-family: math;
     text-transform: capitalize;
-
-    position: absolute;
-    top: -16px;
     color: rgba(137, 43, 226, 0.768);
 }
 

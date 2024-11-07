@@ -41,7 +41,9 @@ const Contact = () => {
         <div className={styles.socialLinks}>
           <div className={styles.socialBox}>
             <a
-              href="mailto:sriharijagan04@gmail.com"
+              href="www.linkedin.com/in/sri-hari-jagan-mushini"
+              target="_blank"
+              rel="noopener noreferrer"
               className={styles.socialIcon}
             >
               <img src={images.linkedinImg} alt="linkedin" />
@@ -50,7 +52,9 @@ const Contact = () => {
 
           <div className={styles.socialBox}>
             <a
-              href="mailto:sriharijagan04@gmail.com"
+              href="https://github.com/SriHariJagan"
+              target="_blank"
+              rel="noopener noreferrer"
               className={styles.socialIcon}
             >
               <img src={images.gitImg} alt="git" />
@@ -59,7 +63,9 @@ const Contact = () => {
 
           <div className={styles.socialBox}>
             <a
-              href="mailto:sriharijagan04@gmail.com"
+              href="https://www.instagram.com/sriharijagan.m/"
+              target="_blank"
+              rel="noopener noreferrer"
               className={styles.socialIcon}
             >
               <img src={images.instagramImg} alt="instagram" />
