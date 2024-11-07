@@ -41,7 +41,7 @@ const Contact = () => {
         <div className={styles.socialLinks}>
           <div className={styles.socialBox}>
             <a
-              href="www.linkedin.com/in/sri-hari-jagan-mushini"
+              href="https://www.linkedin.com/in/sri-hari-jagan-mushini/"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.socialIcon}

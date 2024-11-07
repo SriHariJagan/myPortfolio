@@ -253,6 +253,7 @@
         width: 80%;
         min-height: 400px;
         padding:  0  0 10px 0;
+        margin: auto;
         position: relative;
         display: flex;
         flex-direction: column;
