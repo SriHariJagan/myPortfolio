@@ -41,7 +41,7 @@ const projectData = [
       { name: "React", color: "#febe99f0" }
     ],
     git: "https://github.com/SriHariJagan/BuyBusy-OnlineShopping.git",
-    preview: "",
+    preview: "https://buybusy-onlineshopping.netlify.app/",
     img: buyBusyImg
   },
   {
@@ -57,7 +57,7 @@ const projectData = [
       { name: "PassportJS", color: "#f3f856cd" }
     ],
     git: "https://github.com/SriHariJagan/Nodejs-Authentication.git",
-    preview: "",
+    preview: "https://nodejs-authentication-tx5t.onrender.com",
     img: nodeAuthImg
   },
   {
@@ -73,7 +73,7 @@ const projectData = [
       { name: "PassportJS", color: "#f3f856cd" }
     ],
     git: "https://github.com/SriHariJagan/Polling-System-API.git",
-    preview: "",
+    preview: "https://polling-system-api-l9yw.onrender.com",
     img: pollingSystemImg
   },
   {
@@ -89,7 +89,7 @@ const projectData = [
       { name: "PassportJS", color: "#f3f856cd" }
     ],
     git: "https://github.com/SriHariJagan/HabitTracker.git",
-    preview: "",
+    preview: "https://habittracker-7sbl.onrender.com",
     img: habitTrackerImg
   },
   {
