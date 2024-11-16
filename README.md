@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# Sri Hari Jagan - Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+Welcome to my personal portfolio! I am a passionate and results-driven **MERN Stack Developer** with strong knowledge in **React**, **Node.js**, **MongoDB**, **Express**, and more. I specialize in building scalable and responsive web applications, with a focus on user experience, performance, and code quality. This portfolio showcases my skills, projects, and contributions to the web development community.
 
-In the project directory, you can run:
+----
 
-### `npm start`
+## 🚀 About Me
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- 💻 **MERN Stack Developer** with expertise in **React.js** and backend technologies like **Node.js** and **MongoDB**.
+- 🎓 Graduate in **Computer Science and Engineering (CSE)**.
+- 🚀 Focused on developing modern web applications that provide seamless user experiences and efficient workflows.
+- 🌱 Constantly learning new technologies and refining my skills.
+- 📬 Always open to collaborate and contribute to exciting projects!
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+----
 
-### `npm test`
+## 💻 Skills
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Frontend**: React, JavaScript, HTML5, CSS3, Bootstrap, CSS Modules
+- **Backend**: Node.js, Express.js, REST APIs
+- **Database**: MongoDB, Firebase
+- **Version Control**: Git, GitHub
+- **Deployment**: Netlify, Render
+- **Authentication**: Firebase Authentication, Passport JS
+- **State Management**: Redux, React Context API
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🚀 Projects
 
-### `npm run eject`
+Here are some of the key projects I have worked on:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### [**BuyBusy**](https://buybusy-onlineshopping.netlify.app/)
+A fully functional **React-based** online shopping application with user authentication, shopping cart management, and product listings.
+- **Frontend**: React, React Router, React Context API, CSS Modules, Firebase Authentication
+- **Backend**: Firebase Firestore (for storing user data, orders, and products)  
+- **Key Features**:
+  - **User Authentication**: Sign up, log in, and manage user sessions via Firebase Authentication.
+  - **Cart Functionality**: Add, remove, and update items in the shopping cart.
+  - **Product Listings**: Browse a variety of products with details and pricing.
+  - **Order Management**: Place orders and view order history.
+  - **Responsive Design**: Optimized for mobile and desktop devices.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### [**YouTube Clone**](https://vidtube-utubeclone.netlify.app/)
+A simple **YouTube clone** that allows users to search and watch videos.
+- **Frontend**: React, React Router, CSS Modules, YouTube API
+- **Key Features**:
+  - **Search**: Find videos by keywords.
+  - **Watch Videos**: Play videos directly in the app.
+  - **Video Details**: View titles, descriptions, and other video info.
+  - **Responsive**: Works on both desktop and mobile devices.
+ 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 📝 Connect with Me
 
-## Learn More
+Feel free to reach out to me if you have any questions or would like to collaborate!
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- [![Email](https://img.icons8.com/ios-filled/50/000000/email.png)](mailto:sriharijagan04@gmail.com) 
+- [![LinkedIn](https://img.icons8.com/ios-filled/50/000000/linkedin.png)](https://linkedin.com/in/yourname)
+- [![Website](https://img.icons8.com/ios-filled/50/000000/globe.png)](https://jagansportfolio.netlify.app/)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
