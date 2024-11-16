@@ -59,8 +59,9 @@ A simple **YouTube clone** that allows users to search and watch videos.
 
 Feel free to reach out to me if you have any questions or would like to collaborate!
 
-- [![Email](https://img.icons8.com/ios-filled/50/000000/email.png)](mailto:sriharijagan04@gmail.com) 
-- [![LinkedIn](https://img.icons8.com/ios-filled/50/000000/linkedin.png)](https://linkedin.com/in/yourname)
-- [![Website](https://img.icons8.com/ios-filled/50/000000/globe.png)](https://jagansportfolio.netlify.app/)
+- [📧](mailto:sriharijagan04@gmail.com) [Email](mailto:sriharijagan04@gmail.com)
+- [🔗](https://www.linkedin.com/in/sri-hari-jagan-mushini/) [LinkedIn](https://www.linkedin.com/in/sri-hari-jagan-mushini/)
+- [🌐](https://jagansportfolio.netlify.app/) [Website](https://jagansportfolio.netlify.app/)
+
 
 
