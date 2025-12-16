@@ -1,0 +1,221 @@
+.contactSection {
+  padding: 2rem 1rem;
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+/* ===== Title ===== */
+.title {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.title span {
+  background: linear-gradient(135deg, var(--accent), #6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  margin-top: 0.6rem;
+  margin-bottom: 2rem;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  max-width: 560px;
+  margin-inline: auto;
+}
+
+/* ===== Cards Layout ===== */
+.cardsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+/* ===== Glass Card ===== */
+.card {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 2.8rem;
+  text-align: left;
+  box-shadow: var(--shadow-md);
+}
+
+[data-theme="light"] .card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+}
+
+/* ===== Card Title ===== */
+.card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  color: var(--text-primary);
+}
+
+/* ===== Info Grid ===== */
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* ===== Info Item ===== */
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  padding: 1.3rem 1.4rem;
+  border-radius: 20px;
+
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.06),
+    rgba(255, 255, 255, 0.02)
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.35s ease;
+  text-decoration: none;
+  color: inherit;
+  width: 100%; /* make full width clickable */
+  cursor: pointer; /* pointer on hover */
+}
+
+[data-theme="light"] .infoItem {
+  background: var(--bg-muted);
+  border: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .infoItem {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.infoItem:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
+  border-color: color-mix(in srgb, var(--accent) 40%, transparent);
+}
+
+
+/* Social Icons */
+.socialIcons {
+  display: flex;
+  gap: 1.2rem;
+  margin-top: 1.8rem;
+  justify-content: center;
+}
+
+.socialIcons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.socialIcons a:hover {
+  color: #fff;
+  background: var(--accent);
+  padding: 0.6rem;
+}
+
+
+/* ===== Text Hierarchy ===== */
+.infoItem span {
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.infoItem p {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+/* ===== Icon Glass ===== */
+.iconBox {
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(
+    135deg,
+    var(--icon-bg-start),
+    var(--icon-bg-end)
+  );
+
+  border: 1px solid var(--icon-border);
+  color: var(--accent);
+
+  box-shadow: var(--icon-shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Inner highlight */
+.iconBox::after {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border-radius: inherit;
+  background: linear-gradient(
+    to bottom,
+    var(--icon-inner-highlight),
+    transparent
+  );
+  pointer-events: none;
+}
+
+/* ===== Connect Text ===== */
+.connectText {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .infoGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 2.1rem;
+  }
+
+  .card {
+    padding: 2rem;
+    padding-left: 1rem;
+  }
+
+  .infoGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .connectText {
+    text-align: justify;
+  }
+}
+
+/* @media (max-width: 400px) {
+.infoGrid {
+    position: relative;
+    left: -15px;
+  }
+} */
