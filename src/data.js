@@ -123,12 +123,12 @@ export const projectsData = [
       "Delivered a fully responsive, production-ready interface optimized for performance, usability, and cross-device compatibility.",
     ],
     live: null,
-    github: "https://github.com/SriHariJagan/CIVIL-AI",
+    github: "https://github.com/SriHariJagan/newCivil-AI.git",
   },
   {
     id: 2,
     title: "Maanjo Farm",
-    image: "/Images/project/manjuufarming.png", // Replace with actual project image
+    image: "/Images/project/manjuufarming.png",
     tech: ["React", "Node.js", "MongoDB", "Tailwind CSS"],
     description:
       "An agritourism platform enabling users to purchase products and book villas, with a fast, SEO-friendly, and responsive interface.",
@@ -142,7 +142,7 @@ export const projectsData = [
   {
     id: 1,
     title: "JK Grani Marmo",
-    image: "/Images/project/jkgranimarmo.png", // Replace with actual project image
+    image: "/Images/project/jkgranimarmo.png",
     tech: ["React", "Vite", "Django", "CSS3"],
     description:
       "A business website for a marble and stone company featuring responsive design, inquiry forms, and automated email notifications for leads.",

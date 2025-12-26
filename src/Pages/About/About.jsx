@@ -1,6 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Github, Linkedin, Twitter, Mail, MapPinHouse, ArrowDown } from "lucide-react";
+import {
+  Github,
+  Linkedin,
+  Twitter,
+  Mail,
+  MapPinHouse,
+  ArrowDown,
+} from "lucide-react";
 import styles from "./about.module.css";
 
 const container = {
@@ -96,10 +103,6 @@ const About = () => {
           Full-Stack Developer · React · Next.js · Node.js
         </motion.h3>
 
-        <motion.span className={styles.badge} variants={fadeUp}>
-          Available for Freelance
-        </motion.span>
-
         <motion.p className={styles.desc} variants={fadeUp}>
           I am a Full-Stack Developer with experience in building modern,
           scalable web applications using React, Next.js, Node.js, and Python. I
@@ -111,6 +114,16 @@ const About = () => {
           helping startups and businesses design, develop, and deploy
           high-quality web applications aligned with real business goals.
         </motion.p>
+
+        <motion.div className={styles.badgesContainer} variants={fadeUp}>
+          {/* <motion.span className={styles.badge} variants={fadeUp}>
+            Available for Freelance / Full-Time
+          </motion.span>
+          <motion.span className={styles.badge} variants={fadeUp}>
+            React · Next.js · Node.js Expert
+          </motion.span> */}
+        </motion.div>
+
       </motion.div>
     </section>
   );

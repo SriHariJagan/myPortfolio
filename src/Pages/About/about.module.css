@@ -158,9 +158,16 @@
 }
 
 /* FREELANCE BADGE */
+.badgesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* center them horizontally */
+  gap: 0.5rem; /* spacing between badges */
+  margin-top: 1rem;
+}
+
+/* Keep the badge style as it is */
 .badge {
-  display: inline-block;
-  margin: 1.2rem auto 0;
   padding: 6px 14px;
   font-size: 0.8rem;
   font-weight: 500;
@@ -168,6 +175,7 @@
   border: 1px solid var(--accent);
   border-radius: 999px;
 }
+
 
 /* DESCRIPTION */
 .desc {
@@ -234,14 +242,6 @@ button.resume_btn:hover svg {
   }
 }
 
-/* Mobile Friendly */
-@media (max-width: 500px) {
-  button.resume_btn {
-    padding: 0.35rem 1rem;
-    font-size: 0.85rem;
-  }
-}
-
 
 /* RESPONSIVE */
 @media (max-width: 800px) {
@@ -251,5 +251,29 @@ button.resume_btn:hover svg {
     padding: 5rem 1.5rem;
     text-align: center;
   }
-
 }
+
+
+/* Mobile Friendly */
+@media (max-width: 500px) {
+
+  .about {
+    padding: 6rem .8rem;
+  }
+
+  button.resume_btn {
+    padding: 0.35rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .badgesContainer {
+    width: 100%;
+  }
+
+  .badge{
+    font-size: .6rem;
+    padding: 4px 10px;
+  }
+}
+
+
