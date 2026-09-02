@@ -93,7 +93,7 @@ export const projectsData = [
       "Delivered end-to-end booking + e-commerce flows: Cart (getCart, removeFromCart, applyCouponToCart, checkoutCart, verifyPayment), Book checkout, Bulk Orders, Order Tracking, bookings via POST /bookings with paymentMethod/transactionId/status — handling both payable (Razorpay Card/UPI/NetBanking/Wallet) and enquiry-only (Cash/Pending) paths.",
       "Added admin suite (YogaAdmin, DashboardInsights, ReportsInvoices, BookingsCalendar, StudentProfileWorkspace, CouponManagement, StoreOrders, EmailHealth) — 30+ admin components, RBAC-ready, with DOMPurify, React Calendar, Sharp image optimization and Docker-ready builds.",
     ],
-    live: null,
+    live: "https://pragyayoga.in/",
     github: null,
   },
   {
