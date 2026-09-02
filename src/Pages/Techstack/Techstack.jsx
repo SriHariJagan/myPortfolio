@@ -1,100 +1,104 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
+import { Layers, Server, Database, Shield, Wrench, Sparkles } from "lucide-react";
 import styles from "./techstack.module.css";
-import { Code2 } from "lucide-react";
 
-/* ======================
-   TECH STACK DATA
-====================== */
-const techStack = [
-  { name: "React", src: "/Images/tech/React.png" },
-  { name: "JavaScript", src: "/Images/tech/JavaScript.png" },
-  { name: "HTML5", src: "/Images/tech/HTML5.png" },
-  { name: "CSS3", src: "/Images/tech/CSS3.png" },
-  { name: "Node.js", src: "/Images/tech/Node.js.png" },
-  { name: "Express", src: "/Images/tech/Express.png" },
-  { name: "MongoDB", src: "/Images/tech/MongoDB.png" },
-  { name: "Tailwind CSS", src: "/Images/tech/Tailwind CSS.png" },
-  { name: "Bootstrap", src: "/Images/tech/Bootstrap.png" },
-  { name: "Git", src: "/Images/tech/Git.png" },
-  { name: "GitHub", src: "/Images/tech/GitHub.png" },
-  { name: "GitLab", src: "/Images/tech/GitLab.png" },
-  { name: "Firebase", src: "/Images/tech/Firebase.png" },
-  { name: "Netlify", src: "/Images/tech/netlify.png" },
-  { name: "Postman", src: "/Images/tech/Postman.png" },
-  { name: "Python", src: "/Images/tech/Python.png" },
-  { name: "Redux", src: "/Images/tech/Redux.png" },
-  { name: "Sass", src: "/Images/tech/Sass.png" },
-  { name: "TypeScript", src: "/Images/tech/TypeScript.png" },
-  { name: "Vercel", src: "/Images/tech/Vercel.png" },
-  { name: "Vite", src: "/Images/tech/Vite.js.png" },
+const groups = [
+  { label: "Frontend", icon: Layers, items: ["React", "Next.js", "JavaScript", "TypeScript", "Tailwind CSS", "Redux"] },
+  { label: "Backend", icon: Server, items: ["Node.js", "Express", "FastAPI", "Python"] },
+  { label: "Data", icon: Database, items: ["MongoDB", "MySQL", "Firebase"] },
+  { label: "Engineering", icon: Shield, items: ["REST APIs", "JWT", "RBAC", "Validation"] },
+  { label: "Tooling", icon: Wrench, items: ["Git", "GitHub", "Postman", "Vercel", "Netlify", "Vite"] },
 ];
 
-/* ======================
-   FRAMER VARIANTS
-====================== */
-const containerVariants = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.08, // 👈 one after another
-    },
-  },
-};
-
-const cardVariants = {
-  hidden: {
-    opacity: 0,
-    y: 20,
-    scale: 0.95,
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    scale: 1,
-    transition: {
-      duration: 0.45,
-      ease: "easeOut",
-    },
-  },
+const iconMap = {
+  React: "/Images/tech/React.png",
+  JavaScript: "/Images/tech/JavaScript.png",
+  "Tailwind CSS": "/Images/tech/Tailwind CSS.png",
+  "Node.js": "/Images/tech/Node.js.png",
+  Express: "/Images/tech/Express.png",
+  MongoDB: "/Images/tech/MongoDB.png",
+  Git: "/Images/tech/Git.png",
+  GitHub: "/Images/tech/GitHub.png",
+  Firebase: "/Images/tech/Firebase.png",
+  Netlify: "/Images/tech/netlify.png",
+  Postman: "/Images/tech/Postman.png",
+  Python: "/Images/tech/Python.png",
+  Redux: "/Images/tech/Redux.png",
+  TypeScript: "/Images/tech/TypeScript.png",
+  Vercel: "/Images/tech/Vercel.png",
+  Vite: "/Images/tech/Vite.js.png",
 };
 
 const Techstack = () => {
+  const shouldReduce = useReducedMotion();
   return (
-    <section className={styles.techSection}>
-      {/* ===== Title ===== */}
-      <motion.h1
-        className={styles.title}
-        initial={{ opacity: 0, y: 15 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-      >
-        <Code2 size={26} />
-       Tech <span>Stack</span>
-      </motion.h1>
+    <section className={styles.techSection} aria-label="Engineering stack detail">
+      <div className={styles.gridBg} aria-hidden="true" />
+      <div className={styles.inner}>
+        <motion.div
+          className={styles.head}
+          initial={shouldReduce ? undefined : { opacity: 0, y: 12 }}
+          whileInView={shouldReduce ? undefined : { opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-40px" }}
+          transition={shouldReduce ? undefined : { duration: 0.45 }}
+        >
+          <div className={styles.headLeft}>
+            <span className={styles.eyebrow}>
+              <Sparkles size={12} aria-hidden="true" /> Detail
+            </span>
+            <h2 className={styles.title}>Stack by layer</h2>
+            <p className={styles.sub}>Grouped for scanning — icons where available, with production context.</p>
+          </div>
+          <span className={styles.badge}>Production-verified</span>
+        </motion.div>
 
-      <div className="headingDivider" />
+        <div className={styles.groups}>
+          {groups.map((g, idx) => {
+            const Icon = g.icon;
+            return (
+              <motion.div
+                key={g.label}
+                className={styles.group}
+                initial={shouldReduce ? undefined : { opacity: 0, y: 12 }}
+                whileInView={shouldReduce ? undefined : { opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-40px" }}
+                transition={shouldReduce ? undefined : { duration: 0.4, delay: idx * 0.05 }}
+              >
+                <div className={styles.glow} aria-hidden="true" />
+                <div className={styles.labelWrap}>
+                  <span className={styles.labelIcon} aria-hidden="true">
+                    <Icon size={16} />
+                  </span>
+                  <h3 className={styles.groupLabel}>{g.label}</h3>
+                </div>
 
-      {/* ===== Grid ===== */}
-      <motion.div
-        className={styles.grid}
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-80px" }}
-      >
-        {techStack.map(({ name, src }) => (
-          <motion.div
-            key={name}
-            className={styles.techCard}
-            variants={cardVariants}
-          >
-            <span className={styles.techName}>{name}</span>
-            <img src={src} alt={name} className={styles.icon} />
-          </motion.div>
-        ))}
-      </motion.div>
+                <div className={styles.row}>
+                  {g.items.map((name) => {
+                    const src = iconMap[name];
+                    return (
+                      <span key={name} className={styles.chip}>
+                        {src && (
+                          <img
+                            src={src}
+                            alt=""
+                            width={16}
+                            height={16}
+                            loading="lazy"
+                            decoding="async"
+                            aria-hidden="true"
+                          />
+                        )}
+                        {name}
+                      </span>
+                    );
+                  })}
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
+      </div>
     </section>
   );
 };

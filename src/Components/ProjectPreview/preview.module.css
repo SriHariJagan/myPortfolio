@@ -1,0 +1,127 @@
+.wrap {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-muted);
+}
+
+.wrap.card {
+  height: 168px;
+}
+
+.wrap.modal {
+  height: 100%;
+  min-height: 320px;
+  border-radius: 0;
+  border: none;
+  border-right: 1px solid var(--border-color);
+}
+
+@media (max-width: 860px) {
+  .wrap.modal {
+    min-height: 240px;
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+  }
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.fallbackImage {
+  position: absolute;
+  inset: 0;
+}
+
+.frame {
+  position: absolute;
+  inset: 0;
+  width: 200%;
+  height: 200%;
+  border: 0;
+  transform: scale(0.5);
+  transform-origin: top left;
+  background: #fff;
+}
+
+.badge {
+  position: absolute;
+  right: 0.55rem;
+  bottom: 0.55rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.32rem;
+  padding: 0.28rem 0.52rem;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.76);
+  color: #fff;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.16);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.wrap.card .badge {
+  top: 0.55rem;
+  bottom: auto;
+}
+
+.liveDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: #22c55e;
+  box-shadow: 0 0 0 4px rgba(34,197,94,0.22);
+  display: inline-block;
+}
+
+.viewHint {
+  position: absolute;
+  right: 0.55rem;
+  bottom: 0.55rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.28rem;
+  padding: 0.30rem 0.52rem;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.78);
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 600;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.14);
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.22s ease, transform 0.22s ease;
+  pointer-events: none;
+}
+
+.wrap:hover .viewHint {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.loading {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0.32rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(15,23,42,0.72);
+  color: #fff;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.66rem;
+  border: 1px solid rgba(255,255,255,0.14);
+  pointer-events: none;
+}

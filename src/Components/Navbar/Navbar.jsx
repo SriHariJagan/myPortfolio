@@ -1,13 +1,29 @@
-import React, { useEffect, useState } from "react";
-import { Sun, Moon } from "lucide-react";
+import React, { useEffect, useState, useRef, useCallback } from "react";
+import { Sun, Moon, Menu, X, FileText } from "lucide-react";
 import styles from "./navbar.module.css";
+
+const NAV_LINKS = [
+  { id: "home", label: "Home", href: "#home" },
+  { id: "about", label: "About", href: "#about" },
+  { id: "experience", label: "Experience", href: "#experience" },
+  { id: "skills", label: "Skills", href: "#skills" },
+  { id: "work", label: "Work", href: "#work" },
+  { id: "contact", label: "Contact", href: "#contact" },
+];
 
 const Navbar = () => {
   const [theme, setTheme] = useState(() => {
-    return localStorage.getItem("theme") || "light";
+    if (typeof window !== "undefined") {
+      const saved = localStorage.getItem("theme");
+      if (saved) return saved;
+    }
+    return "dark";
   });
-
   const [scrolled, setScrolled] = useState(false);
+  const [activeId, setActiveId] = useState("home");
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const menuRef = useRef(null);
+  const toggleRef = useRef(null);
 
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
@@ -15,48 +31,181 @@ const Navbar = () => {
   }, [theme]);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 80);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const toggleTheme = () => {
-    setTheme((prev) => (prev === "light" ? "dark" : "light"));
-  };
+  // Active section observer
+  useEffect(() => {
+    const ids = NAV_LINKS.map((l) => l.id);
+    const els = ids.map((id) => document.getElementById(id)).filter(Boolean);
+    if (!els.length) return;
+    const obs = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) setActiveId(e.target.id);
+        });
+      },
+      { rootMargin: "-40% 0px -55% 0px", threshold: 0 }
+    );
+    els.forEach((el) => obs.observe(el));
+    return () => obs.disconnect();
+  }, []);
+
+  // ESC closes mobile, lock scroll
+  useEffect(() => {
+    const onKey = (e) => {
+      if (e.key === "Escape") setMobileOpen(false);
+    };
+    if (mobileOpen) {
+      document.addEventListener("keydown", onKey);
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = "";
+    };
+  }, [mobileOpen]);
+
+  // Close on outside click
+  useEffect(() => {
+    if (!mobileOpen) return;
+    const onClick = (e) => {
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(e.target) &&
+        toggleRef.current &&
+        !toggleRef.current.contains(e.target)
+      ) {
+        setMobileOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", onClick);
+    return () => document.removeEventListener("mousedown", onClick);
+  }, [mobileOpen]);
+
+  const toggleTheme = useCallback(() => {
+    setTheme((p) => (p === "light" ? "dark" : "light"));
+  }, []);
 
   return (
-    <header className={`${styles.navbar} ${scrolled ? styles.glass : ""}`}>
-      {/* LEFT – Logo + Name */}
-      <div className={styles.left}>
-        <img
-          src={
-            theme === "light"
-              ? "/Images/logo/dark.png"
-              : "/Images/logo/light.png"
-          }
-          alt="Logo"
-          className={styles.logo}
-        />
-        <span className={styles.name}>Jagan Mushini</span>
-      </div>
+    <>
+      <a href="#main" className="skipLink">
+        Skip to content
+      </a>
+      <header
+        className={`${styles.navbar} ${scrolled ? styles.scrolled : ""} ${mobileOpen ? styles.menuOpen : ""}`}
+      >
+        <div className={styles.inner}>
+          <a href="#home" className={styles.brand} aria-label="Go to home">
+            <span className={styles.logoWrap} aria-hidden="true">
+              <img
+                src={theme === "light" ? "/Images/logo/dark.png" : "/Images/logo/light.png"}
+                alt=""
+                width={44}
+                height={44}
+                className={styles.logo}
+                loading="eager"
+                decoding="async"
+              />
+            </span>
+            <span className={styles.brandText}>
+              <span className={styles.brandName}>Jagan Mushini</span>
+              <span className={styles.brandRole}>Full-Stack Developer</span>
+            </span>
+          </a>
 
-      {/* RIGHT – Theme Toggle */}
-      <div className={styles.right}>
-        <button
-          onClick={toggleTheme}
-          className={styles.themeBtn}
-          aria-label="Toggle theme"
+          <nav className={styles.desktopNav} aria-label="Primary">
+            <ul role="list">
+              {NAV_LINKS.map((l) => (
+                <li key={l.id}>
+                  <a
+                    href={l.href}
+                    data-active={activeId === l.id ? "true" : "false"}
+                    aria-current={activeId === l.id ? "page" : undefined}
+                    className={styles.navLink}
+                  >
+                    {l.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          <div className={styles.actions}>
+            <a
+              href="/resume/SriHariJaganMushini.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.resumeLink}
+            >
+              <FileText size={14} aria-hidden="true" /> Resume
+            </a>
+            <button
+              type="button"
+              onClick={toggleTheme}
+              className={styles.themeBtn}
+              aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
+              aria-pressed={theme === "dark"}
+              title={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
+            >
+              {theme === "light" ? <Moon size={18} /> : <Sun size={18} />}
+            </button>
+            <button
+              ref={toggleRef}
+              type="button"
+              className={styles.burger}
+              aria-label={mobileOpen ? "Close menu" : "Open menu"}
+              aria-expanded={mobileOpen}
+              aria-controls="mobile-nav"
+              onClick={() => setMobileOpen((v) => !v)}
+            >
+              {mobileOpen ? <X size={20} /> : <Menu size={20} />}
+            </button>
+          </div>
+        </div>
+
+        <nav
+          id="mobile-nav"
+          ref={menuRef}
+          className={`${styles.mobileNav} ${mobileOpen ? styles.mobileOpen : ""}`}
+          aria-label="Mobile"
+          aria-hidden={!mobileOpen}
+          {...(!mobileOpen ? { inert: "" } : {})}
         >
-          {theme === "light" ? (
-            <Moon size={24} strokeWidth={1.8} />
-          ) : (
-            <Sun size={24} strokeWidth={1.8} />
-          )}
-        </button>
-      </div>
-    </header>
+          <ul role="list">
+            {NAV_LINKS.map((l) => (
+              <li key={l.id}>
+                <a
+                  href={l.href}
+                  data-active={activeId === l.id ? "true" : "false"}
+                  onClick={() => setMobileOpen(false)}
+                  className={styles.mobileLink}
+                >
+                  {l.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <a
+            href="/resume/SriHariJaganMushini.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.mobileResume}
+            onClick={() => setMobileOpen(false)}
+          >
+            <FileText size={14} aria-hidden="true" /> Download Resume
+          </a>
+          <a href="#contact" className={styles.mobileCta} onClick={() => setMobileOpen(false)}>
+            Let&apos;s Connect →
+          </a>
+        </nav>
+      </header>
+    </>
   );
 };
 
