@@ -137,6 +137,13 @@
   margin-top: 1.15rem;
 }
 
+.socialItem {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .socialBtn {
   width: 38px;
   height: 38px;
@@ -156,6 +163,71 @@
     border-color 0.22s ease,
     transform 0.22s ease,
     box-shadow 0.22s ease;
+}
+
+.tooltip {
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  padding: 0.4rem 0.7rem;
+  border-radius: 8px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  font-family: "JetBrains Mono", monospace;
+  color: #fff;
+  background: var(--text-primary);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-lg);
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+  z-index: 10;
+}
+
+.tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: var(--border-color) transparent transparent transparent;
+}
+
+.tooltip::before {
+  content: "";
+  position: absolute;
+  top: calc(100% - 1px);
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: var(--text-primary) transparent transparent transparent;
+}
+
+.socialItem:hover .tooltip,
+.socialBtn:focus + .tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+[data-theme="dark"] .tooltip {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .tooltip::before {
+  border-color: var(--bg-primary) transparent transparent transparent;
+}
+
+[data-theme="dark"] .tooltip::after {
+  border-color: var(--border-color) transparent transparent transparent;
 }
 
 [data-theme="dark"] .socialBtn {

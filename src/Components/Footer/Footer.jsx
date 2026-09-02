@@ -54,100 +54,113 @@ const Footer = () => {
           )}
 
           <div className={styles.socials}>
-            <a
-              href={personalData.linkedin}
-              target="_blank"
-              rel="noreferrer"
-              aria-label="LinkedIn — Sri Hari Jagan Mushini"
-              className={styles.socialBtn}
-            >
-              <Linkedin size={16} />
-            </a>
-            <a
-              href={personalData.github}
-              target="_blank"
-              rel="noreferrer"
-              aria-label="GitHub — SriHariJagan"
-              className={styles.socialBtn}
-            >
-              <Github size={16} />
-            </a>
-            <a
-              href={`mailto:${personalData.email}`}
-              aria-label={`Email ${personalData.email}`}
-              className={styles.socialBtn}
-            >
-              <Mail size={16} />
-            </a>
-            <a
-              href="/resume/SriHariJaganMushini.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Resume PDF"
-              className={`${styles.socialBtn} ${styles.socialPrimary}`}
-            >
-              <FileText size={16} />
-            </a>
-          </div>
-        </div>
-
-        {/* Navigate */}
-        <nav className={styles.navCol} aria-label="Footer navigate">
-          <p className={styles.colLabel}>Navigate</p>
-          <ul role="list">
-            <li><a href="#home">Home <ArrowUpRight size={12} aria-hidden="true" /></a></li>
-            <li><a href="#about">About <ArrowUpRight size={12} aria-hidden="true" /></a></li>
-            <li><a href="#experience">Experience <ArrowUpRight size={12} aria-hidden="true" /></a></li>
-            <li><a href="#skills">Skills <ArrowUpRight size={12} aria-hidden="true" /></a></li>
-            <li><a href="#work">Work <ArrowUpRight size={12} aria-hidden="true" /></a></li>
-          </ul>
-        </nav>
-
-        {/* Connect */}
-        <div className={styles.connectCol}>
-          <p className={styles.colLabel}>Connect</p>
-          <div className={styles.contactCard}>
-            <a href={`mailto:${personalData.email}`} className={styles.contactLine}>
-              <Mail size={14} aria-hidden="true" />
-              <span>{personalData.email}</span>
-            </a>
-            <span className={styles.contactLine}>
-              <MapPin size={14} aria-hidden="true" />
-              <span>{personalData.location}</span>
-            </span>
-            <div className={styles.contactActions}>
-              <a href="#contact" className={styles.ctaPrimary}>
-                Let&apos;s Connect →
+            <div className={styles.socialItem}>
+              <a
+                href={personalData.linkedin}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="LinkedIn — Sri Hari Jagan Mushini"
+                className={styles.socialBtn}
+              >
+                <Linkedin size={16} />
               </a>
+              <span className={styles.tooltip}>LinkedIn — Sri Hari Jagan Mushini</span>
+            </div>
+            <div className={styles.socialItem}>
+              <a
+                href={personalData.github}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="GitHub — SriHariJagan"
+                className={styles.socialBtn}
+              >
+                <Github size={16} />
+              </a>
+              <span className={styles.tooltip}>GitHub — SriHariJagan</span>
+            </div>
+            <div className={styles.socialItem}>
+              <a
+                href={`mailto:${personalData.email}`}
+                aria-label={`Email ${personalData.email}`}
+                className={styles.socialBtn}
+              >
+                <Mail size={16} />
+              </a>
+              <span className={styles.tooltip}>{`Email — ${personalData.email}`}</span>
+            </div>
+            <div className={styles.socialItem}>
               <a
                 href="/resume/SriHariJaganMushini.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={styles.ctaGhost}
+                aria-label="Resume PDF"
+                className={`${styles.socialBtn} ${styles.socialPrimary}`}
               >
-                Resume
+                <FileText size={16} />
               </a>
+              <span className={styles.tooltip}>Resume PDF</span>
             </div>
           </div>
 
-          <div className={styles.stackMini} aria-label="Core stack">
-            <span>React</span>
-            <span>Node.js</span>
-            <span>FastAPI</span>
-            <span>MongoDB</span>
-            <span>MySQL</span>
-          </div>
-        </div>
-      </div>
+         </div>
 
-      <div className={styles.bottomBar}>
-        <p className={styles.copy}>© {year} {personalData.name}. All rights reserved.</p>
-        <a href="#home" className={styles.backTop}>
-          Back to top ↑
-        </a>
-      </div>
-    </footer>
-  );
+         {/* Navigate */}
+         <nav className={styles.navCol} aria-label="Footer navigate">
+           <p className={styles.colLabel}>Navigate</p>
+           <ul role="list">
+             <li><a href="#home">Home <ArrowUpRight size={12} aria-hidden="true" /></a></li>
+             <li><a href="#about">About <ArrowUpRight size={12} aria-hidden="true" /></a></li>
+             <li><a href="#experience">Experience <ArrowUpRight size={12} aria-hidden="true" /></a></li>
+             <li><a href="#skills">Skills <ArrowUpRight size={12} aria-hidden="true" /></a></li>
+             <li><a href="#work">Work <ArrowUpRight size={12} aria-hidden="true" /></a></li>
+           </ul>
+         </nav>
+
+         {/* Connect */}
+         <div className={styles.connectCol}>
+           <p className={styles.colLabel}>Connect</p>
+           <div className={styles.contactCard}>
+             <a href={`mailto:${personalData.email}`} className={styles.contactLine}>
+               <Mail size={14} aria-hidden="true" />
+               <span>{personalData.email}</span>
+             </a>
+             <span className={styles.contactLine}>
+               <MapPin size={14} aria-hidden="true" />
+               <span>{personalData.location}</span>
+             </span>
+             <div className={styles.contactActions}>
+               <a href="#contact" className={styles.ctaPrimary}>
+                 Let&apos;s Connect →
+               </a>
+               <a
+                 href="/resume/SriHariJaganMushini.pdf"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 className={styles.ctaGhost}
+               >
+                 Resume
+               </a>
+             </div>
+           </div>
+
+           <div className={styles.stackMini} aria-label="Core stack">
+             <span>React</span>
+             <span>Node.js</span>
+             <span>FastAPI</span>
+             <span>MongoDB</span>
+             <span>MySQL</span>
+           </div>
+         </div>
+       </div>
+
+       <div className={styles.bottomBar}>
+         <p className={styles.copy}>© {year} {personalData.name}. All rights reserved.</p>
+         <a href="#home" className={styles.backTop}>
+           Back to top ↑
+         </a>
+       </div>
+     </footer>
+   );
 };
 
 export default Footer;
