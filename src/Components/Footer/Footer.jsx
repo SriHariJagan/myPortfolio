@@ -142,31 +142,6 @@ const Footer = () => {
 
       <div className={styles.bottomBar}>
         <p className={styles.copy}>© {year} {personalData.name}. All rights reserved.</p>
-
-        <code
-          className={styles.builtCode}
-          aria-label="Built with React 19, Vite, Framer Motion — light and dark intentionally crafted"
-        >
-          <span className={styles.cBrace} aria-hidden="true">
-            &lt;
-          </span>
-          <span className={styles.cTag}>Stack</span>
-          <span className={styles.cAttr}> built</span>
-          <span className={styles.cEq}>=</span>
-          <span className={styles.cBrace}>&#123;</span>
-          <span className={styles.cStr}>&apos;React 19&apos;</span>
-          <span className={styles.cOp}>,</span>
-          <span className={styles.cStr}> &apos;Vite&apos;</span>
-          <span className={styles.cOp}>,</span>
-          <span className={styles.cStr}> &apos;Framer Motion&apos;</span>
-          <span className={styles.cBrace}>&#125;</span>
-          <span className={styles.cBrace} aria-hidden="true">
-            {" "}
-            /&gt;
-          </span>
-          <span className={styles.cComment}> // light &amp; dark crafted</span>
-        </code>
-
         <a href="#home" className={styles.backTop}>
           Back to top ↑
         </a>
