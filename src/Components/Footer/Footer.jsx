@@ -36,14 +36,13 @@ const Footer = () => {
               />
             </span>
             <div>
-              <p className={styles.name}>{personalData.name}</p>
-              <p className={styles.role}>Full-Stack Developer — React · Node.js · FastAPI</p>
+              <p className={styles.name}>{personalData.shortName || personalData.name}</p>
+              <p className={styles.role}>Backend / Full-Stack Developer — Node.js · TypeScript · React</p>
             </div>
           </div>
 
           <p className={styles.bio}>
-            Building production-ready web applications from UI to database to deployment — owning
-            the work from requirement gathering through APIs, auth and production maintenance.
+            Building secure, scalable backend systems and production-ready web applications — from APIs and databases to deployment and maintenance.
           </p>
 
           {personalData.available && (
@@ -90,7 +89,7 @@ const Footer = () => {
             </div>
             <div className={styles.socialItem}>
               <a
-                href="/resume/SriHariJaganMushini.pdf"
+                href={personalData.resumePath}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Resume PDF"
@@ -105,16 +104,16 @@ const Footer = () => {
          </div>
 
          {/* Navigate */}
-         <nav className={styles.navCol} aria-label="Footer navigate">
-           <p className={styles.colLabel}>Navigate</p>
-           <ul role="list">
-             <li><a href="#home">Home <ArrowUpRight size={12} aria-hidden="true" /></a></li>
-             <li><a href="#about">About <ArrowUpRight size={12} aria-hidden="true" /></a></li>
-             <li><a href="#experience">Experience <ArrowUpRight size={12} aria-hidden="true" /></a></li>
-             <li><a href="#skills">Skills <ArrowUpRight size={12} aria-hidden="true" /></a></li>
-             <li><a href="#work">Work <ArrowUpRight size={12} aria-hidden="true" /></a></li>
-           </ul>
-         </nav>
+          <nav className={styles.navCol} aria-label="Footer navigate">
+            <p className={styles.colLabel}>Navigate</p>
+            <ul role="list">
+              <li><a href="#home">Home <ArrowUpRight size={12} aria-hidden="true" /></a></li>
+              <li><a href="#about">About <ArrowUpRight size={12} aria-hidden="true" /></a></li>
+              <li><a href="#experience">Experience <ArrowUpRight size={12} aria-hidden="true" /></a></li>
+              <li><a href="#work">Projects <ArrowUpRight size={12} aria-hidden="true" /></a></li>
+              <li><a href="#skills">Skills <ArrowUpRight size={12} aria-hidden="true" /></a></li>
+            </ul>
+          </nav>
 
          {/* Connect */}
          <div className={styles.connectCol}>
@@ -128,28 +127,28 @@ const Footer = () => {
                <MapPin size={14} aria-hidden="true" />
                <span>{personalData.location}</span>
              </span>
-             <div className={styles.contactActions}>
-               <a href="#contact" className={styles.ctaPrimary}>
-                 Let&apos;s Connect →
-               </a>
-               <a
-                 href="/resume/SriHariJaganMushini.pdf"
-                 target="_blank"
-                 rel="noopener noreferrer"
-                 className={styles.ctaGhost}
-               >
-                 Resume
-               </a>
-             </div>
+              <div className={styles.contactActions}>
+                <a href="#contact" className={styles.ctaPrimary}>
+                  Let&apos;s Connect →
+                </a>
+                <a
+                  href={personalData.resumePath}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.ctaGhost}
+                >
+                  Resume
+                </a>
+              </div>
            </div>
 
-           <div className={styles.stackMini} aria-label="Core stack">
-             <span>React</span>
-             <span>Node.js</span>
-             <span>FastAPI</span>
-             <span>MongoDB</span>
-             <span>MySQL</span>
-           </div>
+            <div className={styles.stackMini} aria-label="Core stack">
+              <span>Node.js</span>
+              <span>TypeScript</span>
+              <span>Express</span>
+              <span>PostgreSQL</span>
+              <span>React</span>
+            </div>
          </div>
        </div>
 

@@ -1,13 +1,14 @@
 import React, { useEffect, useState, useRef, useCallback } from "react";
 import { Sun, Moon, Menu, X, FileText } from "lucide-react";
+import { personalData } from "../../data";
 import styles from "./navbar.module.css";
 
 const NAV_LINKS = [
   { id: "home", label: "Home", href: "#home" },
   { id: "about", label: "About", href: "#about" },
   { id: "experience", label: "Experience", href: "#experience" },
+  { id: "work", label: "Projects", href: "#work" },
   { id: "skills", label: "Skills", href: "#skills" },
-  { id: "work", label: "Work", href: "#work" },
   { id: "contact", label: "Contact", href: "#contact" },
 ];
 
@@ -114,8 +115,8 @@ const Navbar = () => {
               />
             </span>
             <span className={styles.brandText}>
-              <span className={styles.brandName}>Jagan Mushini</span>
-              <span className={styles.brandRole}>Full-Stack Developer</span>
+              <span className={styles.brandName}>Sri Hari Jagan</span>
+              <span className={styles.brandRole}>Backend / Full-Stack Developer</span>
             </span>
           </a>
 
@@ -138,7 +139,7 @@ const Navbar = () => {
 
           <div className={styles.actions}>
             <a
-              href="/resume/SriHariJaganMushini.pdf"
+              href={personalData.resumePath}
               target="_blank"
               rel="noopener noreferrer"
               className={styles.resumeLink}
@@ -192,7 +193,7 @@ const Navbar = () => {
             ))}
           </ul>
           <a
-            href="/resume/SriHariJaganMushini.pdf"
+            href={personalData.resumePath}
             target="_blank"
             rel="noopener noreferrer"
             className={styles.mobileResume}

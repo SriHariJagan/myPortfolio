@@ -63,7 +63,7 @@ const ProjectModal = ({ project, onClose }) => {
                 <span className={styles.dotYellow} />
                 <span className={styles.dotGreen} />
               </span>
-              <span className={styles.browserUrl}>{project.live ? new URL(project.live).hostname : "preview"} — {project.category}</span>
+              <span className={styles.browserUrl}>{project.live ? (() => { try { return new URL(project.live).hostname; } catch { return "preview"; } })() : "preview"} — {project.category}</span>
               <span className={styles.browserLive} data-live={project.live ? "true" : "false"}>
                 {project.live ? "● Live" : "○ Preview"}
               </span>
@@ -73,7 +73,11 @@ const ProjectModal = ({ project, onClose }) => {
             </div>
             <div className={styles.modalImageBar}>
               <span className={styles.monoSmall}>{project.category} · {project.tech.length} technologies</span>
-              {project.live && <span className={styles.monoSmallAccent}>↗ {new URL(project.live).hostname}</span>}
+              {project.live && (
+                <span className={styles.monoSmallAccent}>
+                  ↗ {(() => { try { return new URL(project.live).hostname; } catch { return project.live; } })()}
+                </span>
+              )}
             </div>
           </div>
 
@@ -100,6 +104,37 @@ const ProjectModal = ({ project, onClose }) => {
               })}
             </div>
 
+            {project.problem && (
+              <div className={styles.modalSection}>
+                <h4>Problem</h4>
+                <p className={styles.modalText}>{project.problem}</p>
+              </div>
+            )}
+            {project.solution && (
+              <div className={styles.modalSection}>
+                <h4>Solution</h4>
+                <p className={styles.modalText}>{project.solution}</p>
+              </div>
+            )}
+            {project.myContribution && (
+              <div className={styles.modalSection}>
+                <h4>My Contribution</h4>
+                <p className={styles.modalText}>{project.myContribution}</p>
+              </div>
+            )}
+            {project.keyFeatures && (
+              <div className={styles.modalSection}>
+                <h4>
+                  <Check size={14} aria-hidden="true" /> Key Features
+                </h4>
+                <ul className={styles.modalPoints}>
+                  {project.keyFeatures.map((p, i) => (
+                    <li key={i}>{p}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
             <div className={styles.modalSection}>
               <h4>
                 <Check size={14} aria-hidden="true" /> How it was built
@@ -110,6 +145,38 @@ const ProjectModal = ({ project, onClose }) => {
                 ))}
               </ul>
             </div>
+
+            {project.techStack && (
+              <div className={styles.modalSection}>
+                <h4>Technology</h4>
+                <p className={styles.modalTextMono}>{project.techStack}</p>
+              </div>
+            )}
+
+            {project.architecture && (
+              <div className={styles.modalSection}>
+                <h4>Architecture</h4>
+                <pre className={styles.architectureBlock} aria-label="Architecture diagram">
+                  {project.architecture}
+                </pre>
+                <p className={styles.architectureNote}>Represents real implementation — no invented services.</p>
+              </div>
+            )}
+
+            {project.engineeringHighlights && (
+              <div className={styles.modalSection}>
+                <h4>Engineering Highlights</h4>
+                <div className={styles.highlightRow}>
+                  {project.engineeringHighlights.map((h) => (
+                    <span key={h} className={styles.highlightChip}>{h}</span>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {project.privateNote && (
+              <p className={styles.monoSmall} style={{ fontStyle: "italic", opacity: 0.85 }}>{project.privateNote}</p>
+            )}
 
             <div className={styles.modalActions}>
               {project.live && (
@@ -122,8 +189,11 @@ const ProjectModal = ({ project, onClose }) => {
                   <Github size={14} aria-hidden="true" /> View code
                 </a>
               )}
-              {!project.live && !project.github && (
+              {!project.live && !project.github && !project.privateNote && (
                 <span className={styles.monoSmall}>Private build — links on request</span>
+              )}
+              {!project.live && !project.github && project.privateNote && (
+                <span className={styles.monoSmall}>Private production build — details on request</span>
               )}
             </div>
           </div>
@@ -133,7 +203,7 @@ const ProjectModal = ({ project, onClose }) => {
   );
 };
 
-const CATEGORIES = ["All", "Flagship SaaS", "Engineering Systems", "Production & Business", "Product Ecosystem", "Other"];
+const CATEGORIES = ["All", "Featured / Production", "Other / Production", "Product Ecosystem", "Other"];
 
 const Projects = () => {
   const [selected, setSelected] = useState(null);
@@ -142,8 +212,9 @@ const Projects = () => {
   const open = useCallback((p) => setSelected(p), []);
   const close = useCallback(() => setSelected(null), []);
 
-  // Priority order is as defined in data.js (most impressive first) — filter by group, card shows previous category
   const filtered = activeCat === "All" ? projectsData : projectsData.filter((p) => (p.group || p.category) === activeCat);
+  const featuredProjects = projectsData.filter((p) => p.featured);
+  const otherProjects = projectsData.filter((p) => !p.featured);
 
   return (
     <section id="work" className={styles.projects} aria-labelledby="work-heading">
@@ -157,19 +228,19 @@ const Projects = () => {
               <Sparkles size={12} aria-hidden="true" /> Selected Work · {projectsData.length} builds
             </span>
             <h2 id="work-heading" className={styles.title}>
-              Selected <span>Projects</span>
+              Featured <span>Projects</span>
             </h2>
             <p className={styles.subtitle}>
-              A curated set of <strong>production</strong> and <strong>portfolio builds</strong> — frontend to full-stack.
+              <strong>Production</strong> and <strong>full-stack</strong> builds — backend, APIs and databases first, with frontend depth. Featured are largest and most detailed.
             </p>
             <p className={styles.hint}>
-              <ArrowUpRight size={12} aria-hidden="true" /> Tap any card — glass modal with stack, architecture & build notes
+              <ArrowUpRight size={12} aria-hidden="true" /> Tap any card — case study with Problem → Solution → Contribution → Architecture
             </p>
           </div>
 
           <div className={styles.headRight}>
             <span className={styles.stat}>
-              <span className={styles.statNum}>{projectsData.filter((p) => p.featured).length}</span>
+              <span className={styles.statNum}>{featuredProjects.length}</span>
               <span className={styles.statLabel}>featured</span>
             </span>
             <span className={styles.statDivider} aria-hidden="true" />
@@ -203,11 +274,35 @@ const Projects = () => {
           })}
         </div>
 
-        <div className={styles.grid}>
-          {filtered.map((project) => (
-            <ProjectCard key={project.id} {...project} onView={open} />
-          ))}
-        </div>
+        {activeCat === "All" ? (
+          <>
+            <div className={styles.sectionLabel}>
+              <span className={styles.sectionLabelDot} aria-hidden="true" />
+              Featured / Production Projects — backend & full-stack depth
+            </div>
+            <div className={styles.gridFeatured}>
+              {featuredProjects.map((project) => (
+                <ProjectCard key={project.id} {...project} onView={open} />
+              ))}
+            </div>
+
+            <div className={styles.sectionLabel} style={{ marginTop: "1.6rem" }}>
+              <span className={styles.sectionLabelDot} aria-hidden="true" style={{ background: "var(--text-muted)" }} />
+              Other Projects & Experiments
+            </div>
+            <div className={styles.grid}>
+              {otherProjects.map((project) => (
+                <ProjectCard key={project.id} {...project} onView={open} />
+              ))}
+            </div>
+          </>
+        ) : (
+          <div className={styles.grid}>
+            {filtered.map((project) => (
+              <ProjectCard key={project.id} {...project} onView={open} />
+            ))}
+          </div>
+        )}
       </div>
 
       <AnimatePresence>{selected && <ProjectModal project={selected} onClose={close} />}</AnimatePresence>

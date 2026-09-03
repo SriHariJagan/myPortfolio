@@ -1,6 +1,6 @@
 // ============================================================
 //  PORTFOLIO DATA — Sri Hari Jagan Mushini
-//  16 projects — MetaDev full-stack (1) + suite (5) + Yoga (2) + core 8 — priority ordered
+//  Backend / Full-Stack positioning — honest, production-verified
 // ============================================================
 
 export const experienceData = [
@@ -9,17 +9,19 @@ export const experienceData = [
     company: "TTL Engineering Pvt. Ltd",
     role: "Full Stack Developer",
     period: "Apr 2024 – Present",
-    location: "Andhra Pradesh",
+    location: "Andhra Pradesh, India",
     type: "Full-time",
     description:
       "Building and shipping production-grade web applications across healthcare, business automation, and CMS domains — spanning hospital management, booking systems, and workflow platforms — with full ownership from requirement gathering to deployment.",
     points: [
-      "Shipped 5+ production applications across healthcare, business automation, and CMS domains, building 100+ reusable React components to accelerate feature delivery and maintain UI consistency.",
-      "Designed and developed 45+ REST APIs using Node.js, Express.js, and FastAPI for authentication, RBAC, payments, and business workflows, improving API performance through query optimization and caching.",
-      "Delivered core modules for a multi-role Hospital Management platform supporting Doctor, Pharmacy, Lab, Blood Bank, Ambulance, and Admin workflows with secure role-based access control.",
-      "Implemented Razorpay payment flows, server-side verification, and webhooks for secure production transactions, while managing Docker-based deployments, Nginx, PM2, and VPS infrastructure.",
+      "Developed and maintained RESTful APIs using Node.js, Express.js, TypeScript and FastAPI for production business applications handling authentication, payments and workflow operations.",
+      "Implemented JWT authentication and role-based access control for multi-role applications, securing routes and data by user tier.",
+      "Designed and integrated database models and API workflows using MySQL, PostgreSQL and MongoDB with normalized schemas and relationship handling.",
+      "Integrated third-party services including Razorpay for payment verification, email services and booking/communication APIs for production flows.",
+      "Built reusable React component systems and integrated frontend with REST APIs for admin dashboards, booking and reporting workflows.",
+      "Assisted with containerization and production deployment using Docker, Linux, Nginx, PM2 and VPS infrastructure on Vercel / Netlify / Render.",
     ],
-    tech: ["React.js", "Node.js", "Express.js", "FastAPI", "MongoDB", "MySQL", "Redux Toolkit", "Tailwind CSS", "JWT", "Razorpay", "Docker", "Nginx", "PM2", "Vercel", "Netlify"],
+    tech: ["Node.js", "TypeScript", "Express.js", "FastAPI", "REST APIs", "PostgreSQL", "MySQL", "MongoDB", "Prisma", "JWT", "RBAC", "Razorpay", "React.js", "Docker", "Nginx", "PM2", "Vercel", "Netlify"],
   },
   {
     id: 2,
@@ -32,7 +34,7 @@ export const experienceData = [
       "Built the complete frontend for an AI-powered construction management platform, focused on productivity, team collaboration, and automation.",
     points: [
       "Built 40+ reusable React components and integrated 20+ REST endpoints, implementing robust loading, error handling, and API-driven UI states.",
-      "Translated UI/UX designs into accessible, responsive production interfaces, collaborating with designers and cross-functional teams in an Agile development environment.",
+      "Translated UI/UX designs into accessible, responsive production interfaces, collaborating with designers and cross-functional teams in an Agile environment.",
     ],
     tech: ["React.js", "Tailwind CSS", "CSS Modules", "REST APIs"],
   },
@@ -49,7 +51,6 @@ export const experienceData = [
       "Mentored 150+ students in JavaScript and React.js through code reviews, debugging support, and hands-on project guidance.",
       "Conducted weekly code reviews and debugging sessions, improving student assignment pass rates.",
       "Explained React hooks, component lifecycle, state management, and REST API integration concepts.",
-      "Supported learners with hands-on project reviews and architecture best practices.",
     ],
     tech: ["React.js", "JavaScript", "HTML5", "CSS3"],
   },
@@ -57,14 +58,134 @@ export const experienceData = [
 
 
 export const projectsData = [
+  // ========== FEATURED / PRODUCTION — Backend & Full-Stack ==========
+  {
+    id: 100,
+    title: "Healthcare Operations Platform — Multi-Role Hospital Workflows",
+    image: "/Images/project/metaDev.jpg",
+    tech: ["Node.js", "Express.js", "TypeScript", "FastAPI", "MySQL", "MongoDB", "Prisma", "PostgreSQL", "JWT", "REST APIs", "React.js", "Docker", "Nginx"],
+    category: "Healthcare Platform",
+    group: "Featured / Production",
+    featured: true,
+    description:
+      "Multi-organization healthcare management platform with role-based workflows for Super Admin, Hospital Admin, Doctors, Nurses, Reception, Pharmacy, Laboratory and Blood Bank operations — shipped at TTL Engineering as production business software.",
+    problem: "Hospitals needed a unified system to manage users, staff roles, patient-facing workflows and department operations (pharmacy, lab, blood bank) without fragmented tools and insecure access.",
+    solution: "Built a modular platform with authenticated REST APIs, role-scoped data access and department workflows, backed by normalized database schemas and a React admin interface — covering the full organization → hospital → department → user lifecycle.",
+    myContribution: "Developed REST APIs and integrated frontend workflows for multiple roles, implemented JWT authentication and RBAC, designed database models and validated API contracts, and assisted with Docker/Nginx deployment for production use.",
+    keyFeatures: [
+      "Multi-role architecture with JWT authentication and role-based access control",
+      "REST APIs with validation and error handling for healthcare workflows",
+      "Database design for users, organizations, hospitals and department entities",
+      "Role-specific workflows for doctors, nurses, pharmacy, laboratory and blood bank",
+      "Secure user and hospital management with scoped access",
+      "Production deployment with Docker, Nginx and VPS infrastructure",
+    ],
+    techStack: "Node.js / Express / TypeScript / FastAPI · MySQL / PostgreSQL / MongoDB · Prisma · JWT & RBAC · React · Docker / Nginx",
+    architecture: `Frontend (React)\n    ↓\nAPI / Nginx\n    ↓\nNode.js / Express + FastAPI\n    ↓\nControllers → Services → Schemas\n    ↓\nMySQL / PostgreSQL / MongoDB\n    ↓\nJWT Auth · RBAC · Validation`,
+    points: [
+      "Scoped as production healthcare software at TTL Engineering spanning Super Admin, Hospital Admin, Doctor, Pharmacy, Lab and Blood Bank workflows with secure role-based access.",
+      "Developed RESTful APIs using Node.js, Express.js, TypeScript and FastAPI with validation, error handling and JWT access control per role.",
+      "Designed normalized database models and API workflows using MySQL, PostgreSQL and MongoDB with Prisma / SQLAlchemy patterns.",
+      "Implemented authentication and authorization flows securing department-level operations and user management.",
+      "Integrated frontend workflows with backend APIs for end-to-end hospital operations and reporting views.",
+      "Assisted with Docker-based builds and Nginx/PM2 production deployment for live business usage.",
+    ],
+    engineeringHighlights: [
+      "RBAC for 6+ roles",
+      "JWT + validation",
+      "Normalized DB schemas",
+      "Modular API architecture",
+      "Docker / Nginx deploy",
+    ],
+    live: null,
+    github: null,
+    privateNote: "Private production build — architecture and responsibilities verified via TTL Engineering experience. Demo available on request.",
+  },
+  {
+    id: 15,
+    title: "Pragya Yoga Alliance — Membership & Payment Platform",
+    image: "/Images/project/pragya.jpg",
+    tech: ["React.js", "Vite", "TanStack Query", "Framer Motion", "React Router", "Tailwind CSS", "Razorpay", "REST APIs", "Node.js", "Express.js"],
+    category: "Full-Stack Platform",
+    group: "Featured / Production",
+    featured: true,
+    description:
+      "Full-stack membership and payment platform with secure authentication, subscription/payment workflows and booking management for yoga education and community operations.",
+    problem: "Pragya Yoga needed a content-rich platform that could handle course bookings, book e-commerce, coupons, order tracking and admin operations with reliable payment collection.",
+    solution: "Built a React frontend with lazy-loaded routes and integrated Razorpay Standard Checkout for order creation and server-side verification, plus cart, booking and bulk-order APIs for payable and enquiry-only flows.",
+    myContribution: "Implemented Razorpay checkout (dynamic script, create-order, verify-payment), built cart/booking/bulk-order workflows, and delivered admin suite components with validation and responsive layouts.",
+    keyFeatures: [
+      "Razorpay Standard Checkout with create-order and signature verification",
+      "Cart, book checkout, bulk orders and order tracking flows",
+      "Payable (Card/UPI/NetBanking/Wallet) and enquiry-only (Cash/Pending) paths",
+      "Admin suite: bookings, reports, coupons, orders and email health",
+      "Lazy-loaded routes, accessible layouts and lotus branding",
+    ],
+    techStack: "React 19 / Vite / TanStack Query / React Router · Express.js / Node.js REST APIs · Razorpay · Tailwind CSS · Docker-ready",
+    architecture: `Frontend (React + Vite + TanStack Query)\n    ↓\nREST APIs (Express / Node.js)\n    ↓\nPOST /create-order → Razorpay Checkout\n    ↓\nPOST /verify-payment (signature)\n    ↓\nPOST /bookings · Cart → Orders → Tracking\n    ↓\nValidation · Auth · Error handling`,
+    points: [
+      "Built with React 19, Vite, TanStack Query, Framer Motion and React Router — lazy-loaded routes (About/Classes/YTTC/Events/Payment/Books) with AnimatePresence, lotus branding and responsive, accessible layouts.",
+      "Implemented fully functional Razorpay Standard Checkout: dynamic script injection (checkout.razorpay.com/v1/checkout.js), create-order via POST /create-order (amount in paise, auth headers), Razorpay modal with prefill and theme #7a5cff, and server verification via POST /verify-payment (order_id/payment_id/signature) before confirming booking.",
+      "Delivered end-to-end booking + e-commerce flows: Cart (getCart, removeFromCart, applyCouponToCart, checkoutCart, verifyPayment), Book checkout, Bulk Orders, Order Tracking, bookings via POST /bookings with paymentMethod/transactionId/status — handling both payable (Razorpay Card/UPI/NetBanking/Wallet) and enquiry-only (Cash/Pending) paths.",
+      "Added admin suite (YogaAdmin, DashboardInsights, ReportsInvoices, BookingsCalendar, StudentProfileWorkspace, CouponManagement, StoreOrders, EmailHealth) — 30+ admin components, RBAC-ready, with DOMPurify, React Calendar, Sharp image optimization and Docker-ready builds.",
+    ],
+    engineeringHighlights: [
+      "Razorpay order + verification",
+      "TanStack Query data layer",
+      "RBAC-ready admin suite",
+      "Payable + enquiry flows",
+    ],
+    live: "https://pragyayoga.in/",
+    github: null,
+  },
+  {
+    id: 1,
+    title: "GeoTech — Project Execution & Workforce Management Platform",
+    image: "/Images/project/geotech.png",
+    tech: ["React.js", "FastAPI", "MySQL", "SQLAlchemy", "JWT", "Python", "REST APIs"],
+    category: "Project Execution Platform",
+    group: "Featured / Production",
+    featured: true,
+    description:
+      "Project execution and workforce management platform for geotechnical field operations — Admin → Users → Vendors → Machinery → Projects → Supervisor → Daily Execution Reports → Attendance and Cost Tracking.",
+    problem: "Geotechnical field teams tracked projects, vendors, machinery and daily execution manually — lacking role-based visibility, reporting and cost/work tracking.",
+    solution: "Built a full-stack platform with FastAPI backend (routers → services → schemas, SQLAlchemy ORM) and React frontend, exposing JWT-secured, role-scoped APIs and dashboards for Admin vs Supervisor workflows.",
+    myContribution: "Architected FastAPI backend structure, designed normalized MySQL schema, implemented JWT RBAC and built project tracking/reporting features integrated end-to-end with React.",
+    keyFeatures: [
+      "Role-based access: Admin and Supervisor dashboards with distinct permissions",
+      "Vendor, machinery and project management modules",
+      "Daily execution reports, attendance and work tracking",
+      "Cost and execution tracking with reporting dashboards",
+      "JWT authentication with role-scoped API protection",
+      "Normalized MySQL schema for projects, tasks, users and reporting",
+    ],
+    techStack: "FastAPI (routers/services/schemas) · SQLAlchemy · MySQL · JWT · React.js",
+    architecture: `Frontend (React)\n    ↓\nREST APIs (FastAPI — routers → services → schemas)\n    ↓\nSQLAlchemy ORM\n    ↓\nMySQL (normalized: projects/tasks/users/reports)\n    ↓\nJWT Auth · RBAC (Super Admin vs Supervisor)`,
+    points: [
+      "Architected a modular FastAPI backend with routers, services, schemas, and SQLAlchemy ORM — enabling clean separation of concerns and straightforward feature extension.",
+      "Built role-based dashboards for Super Admin and Supervisors with distinct data views, permissions, and workflow controls.",
+      "Implemented JWT authentication with role-scoped API access, protecting sensitive project data per user tier.",
+      "Delivered Admin → Users → Vendors → Machinery → Projects → Supervisor → Daily Execution Reports → Attendance/Cost tracking workflow integrated end-to-end with the React.js frontend.",
+      "Designed normalised MySQL schema to handle projects, tasks, users, and reporting relationships efficiently.",
+    ],
+    engineeringHighlights: [
+      "FastAPI modular architecture",
+      "SQLAlchemy + normalized MySQL",
+      "JWT RBAC dashboards",
+      "Execution → cost tracking",
+    ],
+    live: null,
+    github: "https://github.com/SriHariJagan/GeoTech-Backend",
+  },
+  // ========== OTHER — production but not top-featured (keeps 3 featured as requested) ==========
   {
     id: 9,
     title: "MetaDev — Global Digital Platform",
     image: "/Images/project/metaDev.jpg",
     tech: ["React.js", "TypeScript", "Vite", "Tailwind CSS", "MUI", "Ant Design", "Framer Motion", "React Router", "Node.js", "Express.js", "Prisma", "PostgreSQL", "JWT", "Zod", "Swagger"],
-    category: "SaaS",
-    group: "Flagship SaaS",
-    featured: true,
+    category: "SaaS Platform",
+    group: "Other / Production",
+    featured: false,
     description:
       "Flagship full-stack platform for MetaDev — global digital ecosystem spanning web, mobile, AI and enterprise. Production marketing site plus central backend API managing auth, users, organizations, modules, plans, subscriptions, jobs and audit across 9+ services at metadev.in.",
     points: [
@@ -78,34 +199,15 @@ export const projectsData = [
     github: null,
   },
   {
-    id: 15,
-    title: "Pragya Yoga — Alliance Platform",
-    image: "/Images/project/pragya.jpg",
-    tech: ["React.js", "Vite", "TanStack Query", "Framer Motion", "React Router", "Tailwind CSS", "Razorpay", "REST APIs"],
-    category: "Websites",
-    group: "Flagship SaaS",
-    featured: true,
-    description:
-      "Flagship website for Pragya Yoga Alliance — a content-rich platform for yoga education, training and community with a fully functional Razorpay payment gateway. Top project.",
-    points: [
-      "Built with React 19, Vite, TanStack Query, Framer Motion and React Router — lazy-loaded routes (About/Classes/YTTC/Events/Payment/Books) with AnimatePresence, lotus branding and responsive, accessible layouts.",
-      "Implemented fully functional Razorpay Standard Checkout: dynamic script injection (checkout.razorpay.com/v1/checkout.js), create-order via POST /create-order (amount in paise, auth headers), Razorpay modal with prefill and theme #7a5cff, and server verification via POST /verify-payment (order_id/payment_id/signature) before confirming booking.",
-      "Delivered end-to-end booking + e-commerce flows: Cart (getCart, removeFromCart, applyCouponToCart, checkoutCart, verifyPayment), Book checkout, Bulk Orders, Order Tracking, bookings via POST /bookings with paymentMethod/transactionId/status — handling both payable (Razorpay Card/UPI/NetBanking/Wallet) and enquiry-only (Cash/Pending) paths.",
-      "Added admin suite (YogaAdmin, DashboardInsights, ReportsInvoices, BookingsCalendar, StudentProfileWorkspace, CouponManagement, StoreOrders, EmailHealth) — 30+ admin components, RBAC-ready, with DOMPurify, React Calendar, Sharp image optimization and Docker-ready builds.",
-    ],
-    live: "https://pragyayoga.in/",
-    github: null,
-  },
-  {
     id: 16,
     title: "Soma Wellness — Yoga & Wellness",
     image: "/Images/project/somawell.jpg",
     tech: ["React.js", "Vite", "TanStack Query", "i18next", "Framer Motion", "React Router", "M-Pesa", "REST APIs"],
     category: "Websites",
-    group: "Flagship SaaS",
-    featured: true,
+    group: "Other / Production",
+    featured: false,
     description:
-      "Flagship website for Soma Wellness — a yoga and wellness platform with internationalization and a fully functional M-Pesa payment gateway. Top project.",
+      "Flagship website for Soma Wellness — a yoga and wellness platform with internationalization and a fully functional M-Pesa payment gateway. Shares patterns with Pragya Yoga with full i18n and M-Pesa specialization.",
     points: [
       "Built with React 19, Vite, TanStack Query, i18next + BrowserLanguageDetector (EN/SW), Framer Motion and React Router — code-split with lazy routes, floating WhatsApp, ScrollProgress and BackToTop, lotus branding.",
       "Implemented fully functional M-Pesa Checkout (MpesaCheckout, PaymentPreviewModal, CheckoutGate with isLoggedIn): parsePrice, STK push via checkoutRequestId/mpesaReceiptNumber, saveBooking to POST /api/bookings (paymentMethod: 'M-PESA', transactionId, status: 'Confirmed'), with success/error handling and i18n (paymentSuccessful/bookingReceived). Razorpay removed — M-Pesa only.",
@@ -116,33 +218,13 @@ export const projectsData = [
     github: null,
   },
   {
-    id: 1,
-    title: "GeoTech Project Management System",
-    image: "/Images/project/geotech.png",
-    tech: ["React.js", "FastAPI", "MySQL", "SQLAlchemy", "JWT", "Python"],
-    category: "SaaS",
-    group: "Engineering Systems",
-    featured: true,
-    description:
-      "A full-stack project management platform built for geotechnical field workflows, supporting role-based multi-user operations with secure API access and real-time reporting.",
-    points: [
-      "Architected a modular FastAPI backend with routers, services, schemas, and SQLAlchemy ORM — enabling clean separation of concerns and straightforward feature extension.",
-      "Built role-based dashboards for Super Admin and Supervisors with distinct data views, permissions, and workflow controls.",
-      "Implemented JWT authentication with role-scoped API access, protecting sensitive project data per user tier.",
-      "Delivered project tracking, reporting dashboards, and workflow management features integrated end-to-end with the React.js frontend.",
-      "Designed normalised MySQL schema to handle projects, tasks, users, and reporting relationships efficiently.",
-    ],
-    live: null,
-    github: "https://github.com/SriHariJagan/GeoTech-Backend",
-  },
-  {
     id: 3,
     title: "Eccellenza Infra — Business Website",
     image: "/Images/project/eccellenza.png",
     tech: ["React.js", "Framer Motion", "CSS Modules", "SEO"],
     category: "Websites",
-    group: "Production & Business",
-    featured: true,
+    group: "Other / Production",
+    featured: false,
     description:
       "A production business website for a commercial interior design and construction company — featuring animated UI, a dynamic project gallery, and strong SEO performance.",
     points: [
@@ -161,8 +243,8 @@ export const projectsData = [
     image: "/Images/project/manjuufarming.png",
     tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
     category: "Websites",
-    group: "Production & Business",
-    featured: true,
+    group: "Other / Production",
+    featured: false,
     description:
       "A full-stack agritourism platform enabling users to browse and purchase agro products and book villas — with a fast, SEO-friendly, and fully responsive interface.",
     points: [
@@ -180,7 +262,7 @@ export const projectsData = [
     image: "/Images/project/jkgranimarmo.png",
     tech: ["React.js", "Vite", "Django", "CSS3"],
     category: "Websites",
-    group: "Production & Business",
+    group: "Other / Production",
     featured: false,
     description:
       "A business website for a marble and granite manufacturing company — featuring multi-category product showcases, inquiry forms, and automated lead management.",
@@ -193,6 +275,7 @@ export const projectsData = [
     live: "https://jkgranimarmo.in",
     github: null,
   },
+  // Ecosystem — not featured individually
   {
     id: 12,
     title: "MetaHire — Hiring & Talent Platform",
@@ -202,7 +285,7 @@ export const projectsData = [
     group: "Product Ecosystem",
     featured: false,
     description:
-      "SaaS hiring and talent management frontend — an 8-step workflow from Create Job to Hire, live at metahire.in.",
+      "SaaS hiring and talent management frontend — an 8-step workflow from Create Job to Hire, live at metahire.in. Part of MetaDev ecosystem.",
     points: [
       "Crafted an 8-step hiring flow: Create Job → Find Candidates → Screen → Shortlist → Interview → Evaluate → Offer → Hire — with animated sections and progress tracking.",
       "Built platform features for Job Management, Candidate Management, pipeline analytics, collaboration, compliance and security — all component-driven.",
@@ -344,7 +427,7 @@ export const projectsData = [
     ],
     category: "SaaS",
     group: "Other",
-    featured: true,
+    featured: false,
     description:
       "A modern, fully responsive payment gateway frontend featuring real-time form validation, automatic card type detection, multi-currency support, and professional payment simulation with animated state transitions.",
     points: [
@@ -373,7 +456,6 @@ export const projectsData = [
     category: "SaaS",
     group: "Other",
     featured: false,
-    highlights: ["Firebase Auth", "Firestore CRUD", "Context API", "React Router"],
     description:
       "A full-featured e-commerce web application demonstrating secure authentication, real-time database operations, and scalable state management with a clean responsive UI.",
     points: [
@@ -391,31 +473,56 @@ export const projectsData = [
 
 
 // ============================================================
-//  SKILLS DATA
+//  SKILLS DATA — grouped professionally, no percentages
 // ============================================================
 
 export const skillsData = {
-  frontend: [
-    "React.js", "JavaScript (ES6+)", "HTML5", "CSS3",
-    "Tailwind CSS", "Redux Toolkit", "Framer Motion", "CSS Modules",
-  ],
-  backend: [
-    "Node.js", "Express.js", "FastAPI", "REST APIs",
-    "JWT Authentication", "Django REST API",
-  ],
-  database: [
-    "MongoDB", "MySQL", "Firebase Firestore", "SQLite",
-  ],
-  tools: [
-    "Git", "GitHub", "Postman", "Vercel", "Netlify",
-    "VS Code", "Vite",
-  ],
-  concepts: [
-    "RBAC", "API Integration", "Responsive Design",
-    "SEO Optimisation", "Performance Optimisation",
-    "Lazy Loading", "Code Splitting", "Component Architecture",
-  ],
+  languages: ["JavaScript", "TypeScript", "Python", "SQL"],
+  backend: ["Node.js", "Express.js", "REST APIs", "JWT", "Authentication", "RBAC"],
+  databases: ["PostgreSQL", "MySQL", "MongoDB", "Redis"],
+  frontend: ["React", "React Router", "React Query (TanStack)", "Zustand", "Redux Toolkit", "Tailwind CSS"],
+  devops: ["Docker", "Linux", "Nginx", "PM2", "Git", "GitHub", "Vercel", "Netlify"],
+  integrations: ["Razorpay", "M-Pesa", "Email APIs", "REST API Integrations"],
+  concepts: ["API Design", "Database Design", "Validation (Zod)", "Error Handling", "SEO", "Performance Optimization"],
 };
+
+
+// ============================================================
+//  BACKEND ENGINEERING — for dedicated section
+// ============================================================
+
+export const backendEngineeringData = [
+  {
+    title: "API Development",
+    desc: "RESTful APIs with Zod validation, centralized error handling, pagination and JWT authentication — modular router → service → schema architecture.",
+    icon: "api",
+  },
+  {
+    title: "Security",
+    desc: "JWT access/refresh, Argon2id hashing, role-based authorization, RBAC guards per route and input validation to protect sensitive workflows.",
+    icon: "security",
+  },
+  {
+    title: "Database",
+    desc: "Schema design with Prisma / SQLAlchemy, relationships and transactions, normalized MySQL/PostgreSQL/MongoDB models and query optimization where applicable.",
+    icon: "database",
+  },
+  {
+    title: "Performance",
+    desc: "Query optimization, caching strategies and asynchronous workflows for responsive APIs — with attention to indexing and payload design.",
+    icon: "performance",
+  },
+  {
+    title: "Infrastructure",
+    desc: "Docker builds, Linux VPS, Nginx reverse proxy, PM2 process management and Vercel/Netlify/Render deployments with health checks and graceful shutdown.",
+    icon: "infra",
+  },
+  {
+    title: "Integrations",
+    desc: "Razorpay and M-Pesa payment gateways with server-side verification, email services and external REST API integrations for real business flows.",
+    icon: "integrations",
+  },
+];
 
 
 // ============================================================
@@ -424,9 +531,11 @@ export const skillsData = {
 
 export const personalData = {
   name: "Sri Hari Jagan Mushini",
-  title: "React.js / MERN Stack Developer",
+  shortName: "Sri Hari Jagan",
+  title: "Backend / Full-Stack Developer",
+  headline: "Building secure, scalable backend systems and production-ready web applications using Node.js, TypeScript, Express.js, React and modern databases.",
   summary:
-    "Results-driven React.js / MERN Stack Developer with 2+ years of hands-on experience delivering production-grade web applications for real businesses. Built and shipped admin dashboards, booking systems, e-commerce platforms, and SEO-optimised business websites using React.js, Node.js, Express.js, MongoDB, and FastAPI. Proven ability to own full delivery — from requirements gathering and API design to deployment and production maintenance.",
+    "I'm a Backend / Full-Stack Developer with hands-on experience building production-oriented web applications using Node.js, TypeScript, Express.js, React and relational/non-relational databases. I've worked on healthcare, project management, payment and business platforms, with experience spanning API development, authentication, role-based access control, database design, third-party integrations and deployment.",
   email: "sriharijagan04@gmail.com",
   phone: "+91 95052 22778",
   linkedin: "https://www.linkedin.com/in/sri-hari-jagan-mushini",
@@ -434,4 +543,6 @@ export const personalData = {
   portfolio: "https://sriharijagan.vercel.app/",
   location: "Andhra Pradesh, India",
   available: true,
+  targetRoles: ["Backend Developer", "Node.js Developer", "TypeScript Developer", "Full-Stack Developer", "Software Engineer"],
+  resumePath: "/resume/SriHariJaganMushini.pdf",
 };

@@ -9,22 +9,24 @@ const fadeUp = {
   show: { opacity: 1, y: 0, transition: { duration: 0.45, ease: "easeOut" } },
 };
 
-const ProjectCard = ({ id, title, image, tech, description, points, live, github, category, featured, onView }) => {
+const ProjectCard = (props) => {
+  const { id, title, image, tech, description, points, live, github, category, featured, onView } = props;
+  const fullProject = props;
   return (
     <motion.article
-      className={styles.card}
+      className={`${styles.card} ${featured ? styles.cardFeatured : ""}`}
       variants={fadeUp}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, margin: "-40px" }}
-      onClick={() => onView?.({ id, title, image, tech, description, points, live, github, category, featured })}
+      onClick={() => onView?.(fullProject)}
       role="button"
       tabIndex={0}
       aria-label={`View details for ${title}`}
       onKeyDown={(e) => {
         if (e.key === "Enter" || e.key === " ") {
           e.preventDefault();
-          onView?.({ id, title, image, tech, description, points, live, github, category, featured });
+          onView?.(fullProject);
         }
       }}
     >

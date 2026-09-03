@@ -1206,3 +1206,113 @@
     font-size: 0.78rem;
   }
 }
+
+/* Featured grid — larger cards */
+.gridFeatured {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 900px) {
+  .gridFeatured {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cardFeatured {
+  border-color: color-mix(in srgb, var(--accent) 18%, var(--border-color));
+  box-shadow: var(--shadow-md);
+}
+
+.cardFeatured .imageWrap {
+  height: 210px;
+}
+
+.sectionLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.85rem;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  padding: 0.42rem 0.75rem;
+  border-radius: 999px;
+}
+
+.sectionLabelDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-soft);
+  flex-shrink: 0;
+}
+
+/* Modal extended */
+.modalText {
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+}
+
+.modalTextMono {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.78rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  background: var(--bg-muted);
+  border: 1px solid var(--border-color);
+  padding: 0.6rem 0.75rem;
+  border-radius: 10px;
+}
+
+.architectureBlock {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.72rem;
+  line-height: 1.55;
+  color: var(--text-primary);
+  background: var(--bg-muted);
+  border: 1px solid var(--border-color);
+  padding: 0.85rem 0.9rem;
+  border-radius: 10px;
+  overflow-x: auto;
+  white-space: pre;
+}
+
+.architectureNote {
+  margin-top: 0.4rem;
+  font-size: 0.70rem;
+  color: var(--text-faint);
+  font-style: italic;
+}
+
+.highlightRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.highlightChip {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-ring);
+  padding: 0.32rem 0.6rem;
+  border-radius: 999px;
+}
+
+.monoSmallAccent {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.68rem;
+  color: var(--accent);
+  font-weight: 600;
+}

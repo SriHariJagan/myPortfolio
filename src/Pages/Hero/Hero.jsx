@@ -40,7 +40,7 @@ const Hero = () => {
           animate={shouldReduce ? undefined : "show"}
         >
           <motion.div variants={shouldReduce ? undefined : fadeUp} className={styles.eyebrowRow}>
-            <span className={styles.eyebrow}>Full-Stack Developer</span>
+            <span className={styles.eyebrow}>Backend / Full-Stack Developer</span>
             {personalData.available && (
               <span className={styles.available}>
                 <span className={styles.dot} aria-hidden="true" />
@@ -50,52 +50,64 @@ const Hero = () => {
           </motion.div>
 
           <motion.h1 variants={shouldReduce ? undefined : fadeUp} className={styles.title}>
-            {personalData.name.split(" ").slice(0, -1).join(" ")}{" "}
-            <span className={styles.accentWord}>
-              {personalData.name.split(" ").slice(-1)[0]}
-            </span>
+            {personalData.shortName ? (
+              <>
+                {personalData.shortName.split(" ").slice(0, -1).join(" ")}{" "}
+                <span className={styles.accentWord}>
+                  {personalData.shortName.split(" ").slice(-1)[0]}
+                </span>
+              </>
+            ) : (
+              <>
+                {personalData.name.split(" ").slice(0, -1).join(" ")}{" "}
+                <span className={styles.accentWord}>
+                  {personalData.name.split(" ").slice(-1)[0]}
+                </span>
+              </>
+            )}
           </motion.h1>
 
           <motion.p variants={shouldReduce ? undefined : fadeUp} className={styles.headline}>
-            Building <span>production-ready</span> web applications — frontend, APIs, databases &amp;
-            deployment.
+            Building <span>secure, scalable</span> backend systems and production-ready web applications using Node.js, TypeScript, Express.js, React and modern databases.
           </motion.p>
 
           <motion.p variants={shouldReduce ? undefined : fadeUp} className={styles.body}>
-            I take requirements from idea to production: responsive React interfaces, secure REST
-            APIs with FastAPI &amp; Express, MongoDB / MySQL schemas, JWT &amp; RBAC, and Vercel /
-            Netlify / Render deployments. At TTL Engineering I own delivery end-to-end — working
-            directly with non-technical stakeholders to ship apps that are used daily.
+            {personalData.summary}
           </motion.p>
 
           <motion.div variants={shouldReduce ? undefined : fadeUp} className={styles.ctaRow}>
             <a href="#work" className={styles.primaryBtn}>
-              View My Work <ArrowRight size={16} aria-hidden="true" />
+              View Projects <ArrowRight size={16} aria-hidden="true" />
             </a>
             <a
-              href="/resume/SriHariJaganMushini.pdf"
+              href={personalData.resumePath}
               target="_blank"
               rel="noopener noreferrer"
               className={styles.secondaryBtn}
             >
               <Download size={16} aria-hidden="true" /> Download Resume
             </a>
-            <a href="#contact" className={styles.tertiaryBtn}>
-              Let&apos;s Connect <span aria-hidden="true">→</span>
+            <a href={personalData.github} target="_blank" rel="noreferrer" className={styles.secondaryBtn} aria-label="GitHub profile">
+              <Github size={16} aria-hidden="true" /> GitHub
+            </a>
+            <a href={personalData.linkedin} target="_blank" rel="noreferrer" className={styles.secondaryBtn} aria-label="LinkedIn profile">
+              <Linkedin size={16} aria-hidden="true" /> LinkedIn
             </a>
           </motion.div>
 
           <motion.div variants={shouldReduce ? undefined : fadeUp} className={styles.microRow} aria-label="Core stack">
-            <span className={styles.mono}>React</span>
-            <span className={styles.sep} aria-hidden="true">/</span>
             <span className={styles.mono}>Node.js</span>
             <span className={styles.sep} aria-hidden="true">/</span>
-            <span className={styles.mono}>FastAPI</span>
+            <span className={styles.mono}>TypeScript</span>
             <span className={styles.sep} aria-hidden="true">/</span>
-            <span className={styles.mono}>MySQL</span>
+            <span className={styles.mono}>Express.js</span>
             <span className={styles.sep} aria-hidden="true">/</span>
-            <span className={styles.mono}>MongoDB</span>
-            <span className={styles.monoMuted}>→ Frontend → APIs → Database → Deployment</span>
+            <span className={styles.mono}>REST APIs</span>
+            <span className={styles.sep} aria-hidden="true">/</span>
+            <span className={styles.mono}>PostgreSQL</span>
+            <span className={styles.sep} aria-hidden="true">/</span>
+            <span className={styles.mono}>React</span>
+            <span className={styles.monoMuted}>→ Secure · Scalable · Production-oriented</span>
           </motion.div>
 
           <motion.div variants={shouldReduce ? undefined : fadeUp} className={styles.socials}>
@@ -143,7 +155,7 @@ const Hero = () => {
             <div className={styles.photo}>
               <img
                 src="/Images/jagan.png"
-                alt="Sri Hari Jagan Mushini — Full-Stack Developer"
+                alt="Sri Hari Jagan Mushini — Backend / Full-Stack Developer"
                 width={560}
                 height={560}
                 fetchPriority="high"
@@ -157,7 +169,7 @@ const Hero = () => {
                 </strong>
                 <span className={styles.photoStack}>
                   <span className={styles.stackTech}>
-                    React <span className={styles.sepDot} aria-hidden="true">·</span> FastAPI <span className={styles.sepDot} aria-hidden="true">·</span> MERN
+                    Node.js <span className={styles.sepDot} aria-hidden="true">·</span> TypeScript <span className={styles.sepDot} aria-hidden="true">·</span> Express <span className={styles.sepDot} aria-hidden="true">·</span> React
                   </span>
                   <span className={styles.stackDivider} aria-hidden="true">—</span>
                   <span className={styles.stackShip}>production shipping</span>

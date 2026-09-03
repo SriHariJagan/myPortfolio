@@ -1,0 +1,166 @@
+.section {
+  position: relative;
+  padding: 2.5rem 0;
+  background: var(--bg-primary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 2rem;
+  align-items: center;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+  padding: 1.6rem 1.5rem;
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  position: relative;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(560px 180px at 20% 0%, color-mix(in srgb, var(--accent) 7%, transparent), transparent 68%);
+  pointer-events: none;
+}
+
+.left, .right {
+  position: relative;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-ring);
+  padding: 0.30rem 0.65rem;
+  border-radius: 999px;
+}
+
+.title {
+  margin-top: 0.7rem;
+  font-size: clamp(1.4rem, 2.8vw, 1.75rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  color: var(--text-primary);
+}
+
+.title span {
+  background: linear-gradient(135deg, var(--accent) 0%, #7c3aed 55%, var(--secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.sub {
+  margin-top: 0.6rem;
+  font-size: 0.90rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  max-width: 520px;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  padding: 0.42rem 0.7rem;
+  border-radius: 999px;
+}
+
+.pill svg {
+  color: var(--accent);
+  opacity: 0.9;
+}
+
+.roles {
+  width: 100%;
+}
+
+.rolesLabel {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.roleChips {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.roleChip {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  padding: 0.34rem 0.65rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .card {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    text-align: left;
+  }
+  .right {
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .section { padding: 2rem 0; }
+  .inner { padding: 0 1.25rem; }
+  .card { padding: 1.3rem 1.2rem; }
+}
+
+@media (max-width: 640px) {
+  .inner { padding: 0 1.1rem; }
+  .title { font-size: clamp(1.25rem, 6vw, 1.5rem); }
+}
+
+@media (max-width: 480px) {
+  .inner { padding: 0 1rem; }
+}

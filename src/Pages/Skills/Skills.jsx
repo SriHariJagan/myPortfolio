@@ -18,49 +18,56 @@ import styles from "./skills.module.css";
 
 const groups = [
   {
-    label: "Frontend",
-    icon: Layers,
+    label: "Languages",
+    icon: Code2,
     accent: "frontend",
-    items: ["React", "Next.js", "JavaScript (ES6+)", "TypeScript", "Tailwind CSS", "CSS Modules", "Redux Toolkit", "Framer Motion"],
-    note: "Production interfaces — responsive, accessible, component-driven.",
+    items: ["JavaScript", "TypeScript", "Python", "SQL"],
+    note: "Core languages used across backend, database and frontend work.",
   },
   {
     label: "Backend",
     icon: Server,
     accent: "backend",
-    items: ["Node.js", "Express.js", "FastAPI", "Python", "REST APIs", "Zustand"],
-    note: "APIs designed for real business workflows — router → service → schema.",
+    items: ["Node.js", "Express.js", "REST APIs", "JWT", "Authentication", "RBAC"],
+    note: "Secure APIs — validation, error handling, pagination and authorization.",
   },
   {
-    label: "Database",
+    label: "Databases",
     icon: Database,
     accent: "data",
-    items: ["MongoDB", "MySQL", "SQLAlchemy", "Firebase Firestore"],
-    note: "Normalized schemas and queries for projects, tasks, users and reporting.",
+    items: ["PostgreSQL", "MySQL", "MongoDB", "Prisma", "SQLAlchemy"],
+    note: "Schema design, relationships, transactions and query optimization.",
   },
   {
-    label: "Authentication & APIs",
-    icon: ShieldCheck,
+    label: "Frontend",
+    icon: Layers,
     accent: "auth",
-    items: ["JWT Authentication", "RBAC", "API Integration", "Django REST API"],
-    note: "Role-scoped JWT, validation and secure frontend–backend communication.",
+    items: ["React", "React Router", "React Query", "Zustand", "Redux Toolkit", "Tailwind CSS"],
+    note: "Component-driven, responsive interfaces integrated with REST APIs.",
   },
   {
-    label: "Tools & Deployment",
+    label: "DevOps",
     icon: Rocket,
     accent: "tools",
-    items: ["Git", "GitHub", "Postman", "Vite", "Vercel", "Netlify", "Render", "VS Code"],
-    note: "Shipping with Vercel / Netlify / Render — from commit to production.",
+    items: ["Docker", "Linux", "Nginx", "PM2", "Git", "GitHub", "Vercel", "Netlify"],
+    note: "Containerization and VPS deployment with Git-based shipping.",
+  },
+  {
+    label: "Integrations",
+    icon: ShieldCheck,
+    accent: "backend",
+    items: ["Razorpay", "M-Pesa", "Email APIs", "REST API Integrations"],
+    note: "Payment verification, email services and external API workflows.",
   },
 ];
 
 const concepts = [
-  { label: "Component Architecture", icon: Component, desc: "Reusable, composable UI" },
-  { label: "Responsive Design", icon: Smartphone, desc: "Mobile-first layouts" },
-  { label: "SEO Optimisation", icon: Search, desc: "Semantic & crawlable" },
-  { label: "Performance Optimisation", icon: Zap, desc: "Fast, light bundles" },
-  { label: "Lazy Loading", icon: Clock3, desc: "Load when needed" },
-  { label: "Code Splitting", icon: Code2, desc: "Chunked delivery" },
+  { label: "API Design", icon: Component, desc: "REST, validation, pagination" },
+  { label: "Database Design", icon: Database, desc: "Normalized schemas & relations" },
+  { label: "Security", icon: ShieldCheck, desc: "JWT, RBAC, validation" },
+  { label: "Performance", icon: Zap, desc: "Caching & async where applicable" },
+  { label: "Infrastructure", icon: Rocket, desc: "Docker, Nginx, VPS" },
+  { label: "Clean Architecture", icon: Code2, desc: "Router → Service → Schema" },
 ];
 
 const Skills = () => {
@@ -80,13 +87,13 @@ const Skills = () => {
         >
           <div className={styles.headLeft}>
             <span className={styles.eyebrow}>
-              <Sparkles size={12} aria-hidden="true" /> Stack
+              <Sparkles size={12} aria-hidden="true" /> Skills
             </span>
             <h2 id="skills-heading" className={styles.title}>
-              Engineering <span>Stack</span>
+              Technical <span>Skills</span>
             </h2>
             <p className={styles.sub}>
-              Technologies I use in production — grouped by where they actually ship.
+              Technologies I genuinely use and can explain in an interview — grouped professionally, no inflated percentages.
             </p>
           </div>
           <span className={styles.provenance}>

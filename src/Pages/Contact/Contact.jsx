@@ -40,7 +40,7 @@ const Contact = () => {
           </h2>
           <p className={styles.sub}>
             {personalData.available
-              ? "I’m open to full-time software engineering opportunities and interesting product work — especially teams shipping real-world web applications."
+              ? "I’m currently open to Backend and Full-Stack Developer opportunities — especially teams building secure, scalable APIs and production web applications."
               : "I’m open to discussing interesting product work and engineering collaborations."}{" "}
             The fastest way to reach me is email or LinkedIn — I reply within a day.
           </p>
@@ -135,7 +135,7 @@ const Contact = () => {
                 <Linkedin size={16} /> LinkedIn
               </a>
               <a
-                href="/resume/SriHariJaganMushini.pdf"
+                href={personalData.resumePath}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`${styles.socialBtn} ${styles.socialPrimary}`}
@@ -158,12 +158,12 @@ const Contact = () => {
             </span>
             <p className={styles.ctaBody}>
               I focus on taking requirements from{" "}
-              <strong>idea to production</strong> — responsive React interfaces, secure APIs and
-              databases, authentication with <strong>RBAC</strong>, and clean deployment.
+              <strong>idea to production</strong> — secure REST APIs with Node.js and TypeScript,
+              database design, authentication with <strong>RBAC</strong>, and clean deployment.
             </p>
             <p className={styles.ctaBodyMuted}>
-              If you&apos;re hiring for a <strong>MERN / full-stack</strong> role or want to see how
-              I&apos;d approach your product, let&apos;s talk. I&apos;ll share architecture, trade-offs,
+              If you&apos;re hiring for a <strong>Backend / Full-Stack</strong> role or want to see how
+              I&apos;d approach your system, let&apos;s talk. I&apos;ll share architecture, trade-offs,
               and a delivery plan — not just code.
             </p>
 

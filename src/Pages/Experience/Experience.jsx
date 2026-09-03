@@ -24,11 +24,10 @@ const Experience = () => {
               <Sparkles size={12} aria-hidden="true" /> Experience
             </span>
             <h2 id="exp-heading" className={styles.title}>
-              Professional <span>Journey</span>
+              Professional <span>Experience</span>
             </h2>
             <p className={styles.subtitle}>
-              Shipping real products — from hospital workflows to business automation, owning
-              delivery end-to-end.
+              Backend and full-stack delivery — REST APIs, authentication, databases and deployment for production business applications.
             </p>
           </div>
         </motion.div>
@@ -83,7 +82,7 @@ const Experience = () => {
                 <p className={styles.desc}>{job.description}</p>
 
                 <ul className={styles.points}>
-                  {(job.points || []).slice(0, 4).map((p, i) => (
+                  {(job.points || []).slice(0, 6).map((p, i) => (
                     <li key={i}>
                       <span className={styles.check} aria-hidden="true">
                         <Check size={12} />
@@ -94,7 +93,7 @@ const Experience = () => {
                 </ul>
 
                 <div className={styles.techRow} aria-label="Technologies used">
-                  {job.tech?.slice(0, 12).map((t) => (
+                  {job.tech?.slice(0, 14).map((t) => (
                     <span key={t} className={styles.techChip}>
                       {t}
                     </span>

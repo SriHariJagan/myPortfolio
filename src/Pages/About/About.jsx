@@ -6,33 +6,33 @@ import styles from "./about.module.css";
 const strengths = [
   {
     icon: Layers,
-    title: "Full-Stack Architecture",
-    desc: "React interfaces connected to REST APIs and normalized databases — component systems built for reuse and growth.",
+    title: "Backend API Development",
+    desc: "RESTful APIs with Node.js, Express.js and TypeScript — validation with Zod, centralized error handling and JWT-secured routes.",
   },
   {
     icon: Shield,
     title: "Authentication & RBAC",
-    desc: "JWT authentication with role-scoped access for multi-tier users — Super Admin, Supervisor, Client — protecting sensitive data.",
+    desc: "JWT authentication with role-based access control for multi-role applications — protecting sensitive workflows per user tier.",
   },
   {
     icon: Database,
-    title: "API & Backend",
-    desc: "Express and FastAPI services with SQLAlchemy/Mongoose, validated inputs and clean router → service → schema separation.",
+    title: "Database Design",
+    desc: "Normalized schemas with MySQL, PostgreSQL and MongoDB using Prisma and SQLAlchemy — relationships, transactions and query design.",
   },
   {
     icon: Palette,
-    title: "Production UI",
-    desc: "Responsive, accessible interfaces with Tailwind/CSS Modules, Framer Motion and SEO-minded structure.",
+    title: "Full-Stack Integration",
+    desc: "React interfaces connected to REST APIs with validation and error states — production UI integrated end-to-end with backend workflows.",
   },
   {
     icon: Rocket,
-    title: "Deployment & Maintenance",
-    desc: "Vercel, Netlify and Render releases with production monitoring — owning the app after it ships.",
+    title: "Deployment & Infrastructure",
+    desc: "Docker, Linux, Nginx, PM2 and Vercel / Netlify / Render — from build to production with monitoring and graceful shutdown.",
   },
   {
     icon: Users,
-    title: "Stakeholder Delivery",
-    desc: "Gathering requirements from non-technical clients and turning ambiguity into working, on-schedule features.",
+    title: "Third-Party Integrations",
+    desc: "Payment gateways (Razorpay, M-Pesa), email APIs and external REST integrations for real business transactions.",
   },
 ];
 
@@ -49,27 +49,30 @@ const About = () => {
             I build real applications <span>that ship</span> — not demos.
           </h2>
           <p className={styles.lead}>
-            I&apos;m a Full-Stack Developer with 2+ years of hands-on experience delivering
-            production-grade web applications for real businesses — admin dashboards, booking
-            systems, e-commerce platforms and workflow managers — owning the work from requirement
-            gathering through API design, UI and deployment.
+            I&apos;m a Backend / Full-Stack Developer with hands-on experience building
+            production-oriented web applications using Node.js, TypeScript, Express.js, React and
+            relational/non-relational databases. I&apos;ve worked on healthcare, project management,
+            payment and business platforms, with experience spanning API development, authentication,
+            role-based access control, database design, third-party integrations and deployment.
           </p>
           <p className={styles.body}>
-            My core stack is React, Node.js/Express, FastAPI &amp; Python with MongoDB, MySQL and
-            SQLAlchemy. I care about clean architecture, secure auth, performance and maintainable
-            code that teammates can extend without friction.
+            My core stack is Node.js, TypeScript, Express.js and FastAPI with MySQL, PostgreSQL,
+            MongoDB, Prisma and SQLAlchemy. I focus on secure, scalable backend systems — REST APIs
+            with validation and error handling, JWT/RBAC, normalized schemas and clean
+            router&nbsp;→&nbsp;service&nbsp;→&nbsp;schema separation.
           </p>
           <p className={styles.body}>
-            At TTL Engineering I&apos;ve shipped 5+ apps used daily by business clients, and built
-            JWT-secured, role-based systems while collaborating directly with stakeholders. As a
-            former Teaching Assistant I&apos;ve also mentored 100+ learners in React fundamentals.
+            At TTL Engineering I&apos;ve shipped production applications used daily by business
+            clients, building JWT-secured, role-based platforms while working directly with
+            stakeholders. I also have frontend depth with React, TypeScript and Tailwind CSS for
+            end-to-end delivery.
           </p>
           <div className={styles.metaGroup}>
             <span className={styles.metaPill}>
-              <Code2 size={12} aria-hidden="true" /> React <span className={styles.metaDot}>·</span> Node <span className={styles.metaDot}>·</span> FastAPI <span className={styles.metaDot}>·</span> SQL <span className={styles.metaDot}>·</span> MongoDB
+              <Code2 size={12} aria-hidden="true" /> Node.js <span className={styles.metaDot}>·</span> TypeScript <span className={styles.metaDot}>·</span> Express <span className={styles.metaDot}>·</span> PostgreSQL <span className={styles.metaDot}>·</span> MongoDB
             </span>
             <span className={styles.metaPill}>
-              <Layers size={12} aria-hidden="true" /> Frontend <ArrowRight size={10} aria-hidden="true" /> APIs <ArrowRight size={10} aria-hidden="true" /> Database <ArrowRight size={10} aria-hidden="true" /> Deployment
+              <Layers size={12} aria-hidden="true" /> APIs <ArrowRight size={10} aria-hidden="true" /> Auth & RBAC <ArrowRight size={10} aria-hidden="true" /> Database <ArrowRight size={10} aria-hidden="true" /> Deployment
             </span>
           </div>
         </div>
