@@ -49,23 +49,24 @@ const About = () => {
             I build real applications <span>that ship</span> — not demos.
           </h2>
           <p className={styles.lead}>
-            I&apos;m a Backend / Full-Stack Developer with hands-on experience building
-            production-oriented web applications using Node.js, TypeScript, Express.js, React and
-            relational/non-relational databases. I&apos;ve worked on healthcare, project management,
-            payment and business platforms, with experience spanning API development, authentication,
-            role-based access control, database design, third-party integrations and deployment.
+            I&apos;m a Software Engineer and Full Stack Developer with 2+ years of experience
+            designing, developing, and deploying production-grade applications using React.js,
+            Node.js, TypeScript, Express.js, FastAPI, MongoDB, and MySQL. I&apos;ve worked on
+            healthcare, project management, payment and business platforms, with experience spanning
+            RESTful API development, JWT-based authentication, role-based access control, database
+            design, third-party integrations and end-to-end deployment.
           </p>
           <p className={styles.body}>
-            My core stack is Node.js, TypeScript, Express.js and FastAPI with MySQL, PostgreSQL,
-            MongoDB, Prisma and SQLAlchemy. I focus on secure, scalable backend systems — REST APIs
-            with validation and error handling, JWT/RBAC, normalized schemas and clean
-            router&nbsp;→&nbsp;service&nbsp;→&nbsp;schema separation.
+            My core stack is React.js, Node.js, TypeScript, Express.js and FastAPI with MySQL,
+            PostgreSQL, MongoDB, Prisma and SQLAlchemy. I build full-stack production applications —
+            RESTful APIs with validation and error handling, JWT authentication with RBAC, normalized
+            database schemas and clean router&nbsp;→&nbsp;service&nbsp;→&nbsp;schema separation.
           </p>
           <p className={styles.body}>
-            At TTL Engineering I&apos;ve shipped production applications used daily by business
+            At XTS Services I&apos;ve shipped production applications used daily by business
             clients, building JWT-secured, role-based platforms while working directly with
-            stakeholders. I also have frontend depth with React, TypeScript and Tailwind CSS for
-            end-to-end delivery.
+            stakeholders. I work across frontend, backend, database and deployment layers to deliver
+            features from development through production release.
           </p>
           <div className={styles.metaGroup}>
             <span className={styles.metaPill}>

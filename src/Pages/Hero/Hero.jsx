@@ -40,7 +40,7 @@ const Hero = () => {
           animate={shouldReduce ? undefined : "show"}
         >
           <motion.div variants={shouldReduce ? undefined : fadeUp} className={styles.eyebrowRow}>
-            <span className={styles.eyebrow}>Backend / Full-Stack Developer</span>
+            <span className={styles.eyebrow}>Software Engineer | Full Stack Developer</span>
             {personalData.available && (
               <span className={styles.available}>
                 <span className={styles.dot} aria-hidden="true" />
@@ -155,7 +155,7 @@ const Hero = () => {
             <div className={styles.photo}>
               <img
                 src="/Images/jagan.png"
-                alt="Sri Hari Jagan Mushini — Backend / Full-Stack Developer"
+                alt="Sri Hari Jagan Mushini — Software Engineer | Full Stack Developer"
                 width={560}
                 height={560}
                 fetchPriority="high"
@@ -176,7 +176,7 @@ const Hero = () => {
                 </span>
               </div>
               <span className={styles.photoBadge}>
-                <MapPin size={11} aria-hidden="true" /> Andhra Pradesh, India
+                <MapPin size={11} aria-hidden="true" /> Hyderabad, India
               </span>
             </div>
           </div>

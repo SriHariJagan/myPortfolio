@@ -37,7 +37,7 @@ const Footer = () => {
             </span>
             <div>
               <p className={styles.name}>{personalData.shortName || personalData.name}</p>
-              <p className={styles.role}>Backend / Full-Stack Developer — Node.js · TypeScript · React</p>
+              <p className={styles.role}>Software Engineer | Full Stack Developer — Node.js · TypeScript · React</p>
             </div>
           </div>
 

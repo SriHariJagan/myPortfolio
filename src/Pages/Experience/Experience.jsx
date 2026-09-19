@@ -27,7 +27,7 @@ const Experience = () => {
               Professional <span>Experience</span>
             </h2>
             <p className={styles.subtitle}>
-              Backend and full-stack delivery — REST APIs, authentication, databases and deployment for production business applications.
+              Software engineering across the full stack — REST APIs, authentication, databases and deployment for production business applications.
             </p>
           </div>
         </motion.div>

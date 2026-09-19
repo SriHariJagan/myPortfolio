@@ -116,7 +116,7 @@ const Navbar = () => {
             </span>
             <span className={styles.brandText}>
               <span className={styles.brandName}>Sri Hari Jagan</span>
-              <span className={styles.brandRole}>Backend / Full-Stack Developer</span>
+              <span className={styles.brandRole}>Software Engineer</span>
             </span>
           </a>
 

@@ -53,7 +53,7 @@ const Contact = () => {
               <Clock size={13} aria-hidden="true" /> Replies in ~24h
             </span>
             <span className={styles.pill}>
-              <MapPin size={13} aria-hidden="true" /> Andhra Pradesh · Remote
+              <MapPin size={13} aria-hidden="true" /> Hyderabad · Remote
             </span>
           </div>
         </motion.div>
@@ -162,7 +162,7 @@ const Contact = () => {
               database design, authentication with <strong>RBAC</strong>, and clean deployment.
             </p>
             <p className={styles.ctaBodyMuted}>
-              If you&apos;re hiring for a <strong>Backend / Full-Stack</strong> role or want to see how
+              If you&apos;re hiring for a <strong>Software Engineer / Full Stack Developer</strong> role or want to see how
               I&apos;d approach your system, let&apos;s talk. I&apos;ll share architecture, trade-offs,
               and a delivery plan — not just code.
             </p>

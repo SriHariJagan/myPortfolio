@@ -1,15 +1,15 @@
 // ============================================================
 //  PORTFOLIO DATA — Sri Hari Jagan Mushini
-//  Backend / Full-Stack positioning — honest, production-verified
+//  Software Engineer / Full Stack Developer positioning — honest, production-verified
 // ============================================================
 
 export const experienceData = [
   {
     id: 1,
-    company: "TTL Engineering Pvt. Ltd",
-    role: "Full Stack Developer",
+    company: "XTS Services, Hyderabad",
+    role: "Software Engineer",
     period: "Apr 2024 – Present",
-    location: "Andhra Pradesh, India",
+    location: "Hyderabad",
     type: "Full-time",
     description:
       "Building and shipping production-grade web applications across healthcare, business automation, and CMS domains — spanning hospital management, booking systems, and workflow platforms — with full ownership from requirement gathering to deployment.",
@@ -62,13 +62,13 @@ export const projectsData = [
   {
     id: 100,
     title: "Healthcare Operations Platform — Multi-Role Hospital Workflows",
-    image: "/Images/project/metaDev.jpg",
+    image: "/Images/project/metaHealth.png",
     tech: ["Node.js", "Express.js", "TypeScript", "FastAPI", "MySQL", "MongoDB", "Prisma", "PostgreSQL", "JWT", "REST APIs", "React.js", "Docker", "Nginx"],
     category: "Healthcare Platform",
     group: "Featured / Production",
     featured: true,
     description:
-      "Multi-organization healthcare management platform with role-based workflows for Super Admin, Hospital Admin, Doctors, Nurses, Reception, Pharmacy, Laboratory and Blood Bank operations — shipped at TTL Engineering as production business software.",
+      "Multi-organization healthcare management platform with role-based workflows for Super Admin, Hospital Admin, Doctors, Nurses, Reception, Pharmacy, Laboratory and Blood Bank operations — shipped at XTS Services as production business software.",
     problem: "Hospitals needed a unified system to manage users, staff roles, patient-facing workflows and department operations (pharmacy, lab, blood bank) without fragmented tools and insecure access.",
     solution: "Built a modular platform with authenticated REST APIs, role-scoped data access and department workflows, backed by normalized database schemas and a React admin interface — covering the full organization → hospital → department → user lifecycle.",
     myContribution: "Developed REST APIs and integrated frontend workflows for multiple roles, implemented JWT authentication and RBAC, designed database models and validated API contracts, and assisted with Docker/Nginx deployment for production use.",
@@ -83,7 +83,7 @@ export const projectsData = [
     techStack: "Node.js / Express / TypeScript / FastAPI · MySQL / PostgreSQL / MongoDB · Prisma · JWT & RBAC · React · Docker / Nginx",
     architecture: `Frontend (React)\n    ↓\nAPI / Nginx\n    ↓\nNode.js / Express + FastAPI\n    ↓\nControllers → Services → Schemas\n    ↓\nMySQL / PostgreSQL / MongoDB\n    ↓\nJWT Auth · RBAC · Validation`,
     points: [
-      "Scoped as production healthcare software at TTL Engineering spanning Super Admin, Hospital Admin, Doctor, Pharmacy, Lab and Blood Bank workflows with secure role-based access.",
+      "Scoped as production healthcare software at XTS Services spanning Super Admin, Hospital Admin, Doctor, Pharmacy, Lab and Blood Bank workflows with secure role-based access.",
       "Developed RESTful APIs using Node.js, Express.js, TypeScript and FastAPI with validation, error handling and JWT access control per role.",
       "Designed normalized database models and API workflows using MySQL, PostgreSQL and MongoDB with Prisma / SQLAlchemy patterns.",
       "Implemented authentication and authorization flows securing department-level operations and user management.",
@@ -99,7 +99,7 @@ export const projectsData = [
     ],
     live: null,
     github: null,
-    privateNote: "Private production build — architecture and responsibilities verified via TTL Engineering experience. Demo available on request.",
+    privateNote: "Private production build — architecture and responsibilities verified via XTS Services experience. Demo available on request.",
   },
   {
     id: 15,
@@ -532,17 +532,17 @@ export const backendEngineeringData = [
 export const personalData = {
   name: "Sri Hari Jagan Mushini",
   shortName: "Sri Hari Jagan",
-  title: "Backend / Full-Stack Developer",
-  headline: "Building secure, scalable backend systems and production-ready web applications using Node.js, TypeScript, Express.js, React and modern databases.",
+  title: "Software Engineer | Full Stack Developer",
+  headline: "Building secure, scalable production applications using React.js, Node.js, TypeScript, Express.js, FastAPI and modern databases.",
   summary:
-    "I'm a Backend / Full-Stack Developer with hands-on experience building production-oriented web applications using Node.js, TypeScript, Express.js, React and relational/non-relational databases. I've worked on healthcare, project management, payment and business platforms, with experience spanning API development, authentication, role-based access control, database design, third-party integrations and deployment.",
+    "I'm a Software Engineer and Full Stack Developer with 2+ years of experience designing, developing, and deploying production-grade applications using React.js, Node.js, TypeScript, Express.js, FastAPI, MongoDB, and MySQL. I've worked on healthcare, project management, payment and business platforms, with experience spanning RESTful API development, JWT-based authentication, role-based access control, database design, third-party integrations and end-to-end deployment.",
   email: "sriharijagan04@gmail.com",
   phone: "+91 95052 22778",
   linkedin: "https://www.linkedin.com/in/sri-hari-jagan-mushini",
   github: "https://github.com/SriHariJagan",
   portfolio: "https://sriharijagan.vercel.app/",
-  location: "Andhra Pradesh, India",
+  location: "Hyderabad, India",
   available: true,
-  targetRoles: ["Backend Developer", "Node.js Developer", "TypeScript Developer", "Full-Stack Developer", "Software Engineer"],
+  targetRoles: ["Software Engineer", "Full Stack Developer", "Backend Developer", "Node.js Developer", "TypeScript Developer"],
   resumePath: "/resume/SriHariJaganMushini.pdf",
 };

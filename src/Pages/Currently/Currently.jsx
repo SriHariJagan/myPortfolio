@@ -21,10 +21,10 @@ const Currently = () => {
               <Sparkles size={12} aria-hidden="true" /> Currently
             </span>
             <h2 id="currently-heading" className={styles.title}>
-              Open to <span>Backend / Full-Stack</span> opportunities
+              Open to <span>Software Engineer / Full Stack</span> opportunities
             </h2>
             <p className={styles.sub}>
-              Available for full-time roles where I can build secure, scalable backend systems and production web applications.
+              Available for full-time Software Engineer and Full Stack Developer roles where I can build secure, scalable production applications.
             </p>
           </div>
 
